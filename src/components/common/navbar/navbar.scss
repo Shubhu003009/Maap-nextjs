@@ -1,0 +1,27 @@
+.site_header {
+  padding-block: 10px;
+  box-shadow: #9494944d 0 2px 6px;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    > ul {
+      display: none;
+    }
+    > span {
+      display: none;
+    }
+    @media (min-width: 769px) {
+      > ul {
+        display: flex;
+        a {
+          padding: 5px;
+        }
+      }
+      > span {
+        display: block;
+      }
+    }
+  }
+}

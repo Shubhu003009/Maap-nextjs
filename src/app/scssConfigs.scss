@@ -1,0 +1,48 @@
+.light-mode {
+  --body_bg: #ffffff;
+  --body_bg_light: #f3f3f3;
+  --body_bg_lightest: #ebebeb;
+  --body_bg_sec: #afe6c3;
+  --body_bg_sec_light: #f0faf6;
+  --body_bg_sec_bright: #30d46f;
+  --body_bg_sec_dark: #2cbc63;
+  --body_bg_sec_darkest: #01493c;
+  --body_bg_ter: #e9edff;
+
+  --body_bg_transparent: #ffb30018;
+  --body_color: black;
+  --sidebar_color: rgba(184, 80, 66, 0.656);
+  --link_color: black;
+  --link_hover_color: #666666;
+  --thumb_color: #454545;
+}
+
+.dark-mode {
+  --body_bg: #080808;
+  --body_bg_transparent: #0c0c1d56;
+  --body_color: lightgray;
+  --link_color: white;
+  --link_hover_color: #c1c1c1;
+  --thumb_color: #a1a1a1;
+}
+
+// FETCHING FIELD (FOOD-Ecom)
+
+// #ca9787      P-featured-ingredients-banner-color
+// #b46a54      P-desc-banner-color
+// #f6f7f7      website-bg-color
+// #e3b8ac      website-top-banner-bg-color
+
+// _______________________________________________________________________________________________________
+
+// box-shadow: 0 25px 20px 0 rgba(0, 0, 0, .16), 0 -1px 2px 0 rgba(0, 0, 0, .1);
+// rgb(237, 237, 237) bg-color
+
+// root-font-size: 16px
+//  8px = 0.5rem
+//  9px = 0.563rem
+//  10px = 0.625rem
+//  11px = 0.688rem
+//  12px = 0.75rem
+//  15px = 0.938rem
+//  20px = 1.25rem
