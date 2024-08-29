@@ -1,31 +1,27 @@
-"use client";
+// "use client";
 
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
-const useLocalStorage = (key, initialValue) => {
-  const [value, setValue] = useState(() => {
-    const localValue = window.localStorage.getItem(key);
+// const useLocalStorage = (key, initialValue) => {
+//   const [value, setValue] = useState(initialValue);
+//   useEffect(() => {
+//     const theme = JSON.parse(localStorage.getItem(key));
+//     if (theme) {
+//       setValue(value);
+//     }
+//   }, []);
 
-    try {
-      return localValue ? JSON.parse(localValue) : initialValue;
-    } catch (error) {
-      console.log(error);
-      return initialValue;
-    }
-  });
+//   useEffect(() => {
+//     const theme = JSON.parse(localStorage.getItem("dark-mode"));
+//     if (theme) {
+//       setTheme(theme);
+//     }
+//   }, []);
 
-  useEffect(() => {
-    window.localStorage.setItem(key, JSON.stringify(value));
-    const body = document.body.classList;
-    if (value) {
-      body.remove("light-mode");
-      body.add("dark-mode");
-    } else {
-      body.remove("dark-mode");
-      body.add("light-mode");
-    }
-  }, [key, value]);
-  return [value, setValue];
-};
+//   useEffect(() => {
+//     window.localStorage.setItem(key, JSON.stringify(value));
+//   }, [value]);
+//   return [value, setValue];
+// };
 
-export default useLocalStorage;
+// export default useLocalStorage;

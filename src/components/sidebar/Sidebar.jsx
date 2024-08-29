@@ -10,7 +10,6 @@ import DarkMode from "../darkMode/DarkMode";
 
 const Sidebar = ({ navLinks, socialLinks }) => {
   const [open, setopen] = useState(false);
-  console.log(open);
 
   const sidebarVars = {
     close: {
@@ -77,10 +76,16 @@ const Sidebar = ({ navLinks, socialLinks }) => {
     },
   };
 
+  if (typeof window !== "undefined") {
+    open
+      ? document.body.classList.add("fixed", "inset-0")
+      : document.body.classList.remove("fixed", "inset-0");
+  }
+
   return (
     <>
       <motion.div
-        className="block md:hidden relative z-10"
+        className="block md:hidden relative  z-10"
         style={{ transform: "translateX(20px) scale(0.5)" }}
       >
         <BurgerButton open={open} setopen={setopen} />
@@ -94,7 +99,7 @@ const Sidebar = ({ navLinks, socialLinks }) => {
             animate="open"
             exit="close"
             className={
-              "flex bg-sidebar backdrop-blur-[10px] origin-left md:hidden fixed inset-0 p-6 space-y-10 flex-col justify-center"
+              "flex bg-sidebar touch-none backdrop-blur-[10px] origin-left md:hidden fixed inset-0 p-6 space-y-10 flex-col justify-center"
             }
           >
             <motion.ul
@@ -130,7 +135,7 @@ const Sidebar = ({ navLinks, socialLinks }) => {
 
             <div className="overflow-hidden">
               <motion.div variants={sideBarLinkVars}>
-                <ul className="flex gap-x-5 justify-center">
+                <ul className="flex gap-x-5 items-center justify-center">
                   {socialLinks.map((link) => (
                     <Link key={link.href} href={link.href}>
                       <li
