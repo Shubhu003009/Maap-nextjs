@@ -4,12 +4,25 @@
 
 @import "./theme.scss";
 
+:root {
+  --radius: 6px;
+}
+
 *,
 *::before,
 *::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+a,
+button {
+  @apply hover:underline focus-visible:outline rounded-sm focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary_light;
+}
+
+:focus-visible {
+  outline: none;
 }
 
 html {
@@ -20,7 +33,6 @@ html {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  transition: color 350ms, background 350ms;
 }
 
 img,

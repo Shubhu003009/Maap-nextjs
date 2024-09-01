@@ -1,3 +1,5 @@
+"use client";
+
 import { useTheme } from "@/contexts/Theme";
 import themeBtnSfx from "@/utils/themeButtonSound";
 

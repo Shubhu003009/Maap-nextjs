@@ -1,3 +1,5 @@
+"use client";
+
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
@@ -115,6 +117,7 @@ const Sidebar = ({ navLinks }) => {
     <>
       <motion.div
         className="block md:hidden relative  z-10"
+        role="button"
         style={{ transform: "translateX(20px) scale(0.5)" }}
       >
         <BurgerButton open={open} setopen={setopen} />
