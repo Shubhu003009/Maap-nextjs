@@ -1,43 +1,56 @@
-.light-mode {
-  --body_bg: #ffffff;
-  --body_bg_light: #f3f3f3;
-  --body_bg_lightest: #ebebeb;
-  --body_bg_sec: #afe6c3;
-  --body_bg_sec_light: #f0faf6;
-  --body_bg_sec_bright: #30d46f;
-  --body_bg_sec_dark: #2cbc63;
-  --body_bg_sec_darkest: #01493c;
-  --body_bg_ter: #e9edff;
+// .light-mode {
+//   --primary: 174, 229, 194; //#afe6c3
+//   --primary_light: 243, 243, 243; //#f3f3f3
+//   --primary_bright: 48, 212, 111; //#30d46f
+//   --primary_dark: 1, 73, 60; //#01493c
+//   --secondary: 233, 237, 255; //#e9edff
+// }
 
-  --body_bg_transparent: #ffb30018;
-  --body_color: black;
-  --sidebar_color: rgba(184, 80, 66, 0.656);
-  --link_color: black;
-  --link_hover_color: #666666;
-  --thumb_color: #454545;
-}
+// .dark-mode {
+//   --primary: 1, 73, 60; //#01493c
+//   --primary_light: 1, 73, 60; //#01493c
+//   --primary_bright: 48, 212, 111; //#30d46f
+//   --primary_dark: 243, 243, 243; //#f3f3f3
+//   --secondary: 233, 237, 255; //#e9edff
+// }
 
-.dark-mode {
-  --body_bg: #080808;
-  --body_bg_transparent: #0c0c1d56;
-  --body_color: lightgray;
-  --link_color: white;
-  --link_hover_color: #c1c1c1;
-  --thumb_color: #a1a1a1;
-}
+// --primary: #afe6c3;
+// --primary_light: #f3f3f3;
+// --primary_bright: #30d46f;
+// --primary_dark: #01493c;
+// --secondary: #e9edff;
 
-// FETCHING FIELD (FOOD-Ecom)
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --primary: #01493c;
+//     --primary_light: #30d46f;
+//     --primary_bright: #f3f3f3;
+//     --primary_dark: #afe6c3;
+//     --secondary: #e9edff;
+//   }
+// }
 
+// _______________________________________________________________________________________________________
+// .theme2-mode {
+//   --primary: 202, 151, 135; // #ca9787
+//   --primary_light: 246, 247, 247; // #f6f7f7
+//   --primary_bright: 227, 184, 172; // #e3b8ac
+//   --primary_dark: 180, 106, 84; // #b46a54
+//   --secondary: 184, 135, 202; // #b887ca
+// }
+// FETCHING FIELD (seeds-ecom)
 // #ca9787      P-featured-ingredients-banner-color
 // #b46a54      P-desc-banner-color
 // #f6f7f7      website-bg-color
 // #e3b8ac      website-top-banner-bg-color
+// #b887ca      website-top-banner-bg-color
 
 // _______________________________________________________________________________________________________
-
+// transparent blur effect
 // box-shadow: 0 25px 20px 0 rgba(0, 0, 0, .16), 0 -1px 2px 0 rgba(0, 0, 0, .1);
 // rgb(237, 237, 237) bg-color
 
+// _______________________________________________________________________________________________________
 // root-font-size: 16px
 //  8px = 0.5rem
 //  9px = 0.563rem

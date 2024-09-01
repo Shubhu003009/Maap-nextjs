@@ -19,20 +19,26 @@ module.exports = {
     },
     extend: {
       colors: {
-        sidebar: "var(--sidebar_color)",
+        // CUSTOM_COLORS
+        primary: "rgba(var(--primary))", //#afe6c3
+        primary_light: "rgba(var(--primary_light))", //#f3f3f3
+        primary_bright: "rgba(var(--primary_bright))", //#30d46f
+        primary_dark: "rgba(var(--primary_dark))", //#01493c
+        secondary: "rgba(var(--secondary))", //#e9edff
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
+        // primary: {
+        //   DEFAULT: "hsl(var(--primary))",
+        //   foreground: "hsl(var(--primary-foreground))",
+        // },
+        // secondary: {
+        //   DEFAULT: "hsl(var(--secondary))",
+        //   foreground: "hsl(var(--secondary-foreground))",
+        // },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",

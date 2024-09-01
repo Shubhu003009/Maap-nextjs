@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "./scssConfigs.scss";
+@import "./theme.scss";
 
 *,
 *::before,
@@ -15,12 +15,9 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  font-family: var(--font-poppins);
 }
 
 body {
-  color: var(--link_color);
-  background: var(--body_bg);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   transition: color 350ms, background 350ms;
@@ -31,7 +28,7 @@ picture,
 video,
 canvas,
 svg {
-  display: block;
+  display: inline-block;
   max-width: 100%;
 }
 
@@ -46,7 +43,6 @@ button {
   border: none;
   padding: 3px;
   cursor: pointer;
-  color: var(--link_color);
   background: transparent;
 }
 
@@ -65,18 +61,6 @@ h6 {
   isolation: isolate;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-a:hover {
-  color: var(--link_hover_color);
-}
-
-ul {
-  list-style: none;
-}
-
 section {
   height: 100vh;
 }
@@ -86,12 +70,12 @@ section {
 }
 ::-webkit-scrollbar-track {
   border-radius: 3px;
-  background-color: var(--scrollbar-background-color, transparent);
+  background-color: var(--primary_light);
 }
 ::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  background-color: var(--scrollbar-color, var(--color-gray-700));
-  border: 2px solid var(--scrollbar-background-color, var(--color-gray-100));
+  border-radius: 3px;
+  background-color: var(--primary_dark);
+  border: 2px solid var(--primary_light);
 }
 ::-webkit-scrollbar-thumb:hover {
   cursor: grab;

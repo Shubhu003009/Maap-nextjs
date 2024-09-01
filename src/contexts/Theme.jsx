@@ -3,34 +3,30 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
 const ThemeContext = createContext({
-  theme: false,
+  theme: null,
   toggleTheme: () => {},
 });
 
 export const ThemeProvider = ({ children }) => {
+  const [hydrated, setHydrated] = useState(false); // Hydration flag
   const [theme, setTheme] = useState(null);
 
   useEffect(() => {
-    const theme = JSON.parse(localStorage.getItem("dark-mode"));
-    if (theme) {
-      setTheme(theme);
-    }
+    const theme =
+      JSON.parse(localStorage.getItem("color_theme")) || "light-mode";
+    setTheme(theme);
+    setHydrated(true);
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("dark-mode", JSON.stringify(theme));
-    const body = document.body.classList;
-    if (theme) {
-      body.remove("light-mode");
-      body.add("dark-mode");
-    } else {
-      body.remove("dark-mode");
-      body.add("light-mode");
+    if (hydrated) {
+      localStorage.setItem("color_theme", JSON.stringify(theme));
+      document.documentElement.setAttribute("data-theme", theme);
     }
-  }, [theme]);
+  }, [theme, hydrated]);
 
   function toggleTheme() {
-    setTheme((prev) => !prev);
+    setTheme((prev) => (prev === "light-mode" ? "dark-mode" : "light-mode"));
   }
 
   return (
