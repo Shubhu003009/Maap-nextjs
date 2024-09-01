@@ -3,7 +3,7 @@
 import { useTheme } from "@/contexts/Theme";
 import sounds from "@/utils/themeButtonSound";
 
-export default function DarkMode({
+export default function  DarkMode({
   outerColor = "bg-primary",
   innerColor = "bg-primary_dark",
 }) {

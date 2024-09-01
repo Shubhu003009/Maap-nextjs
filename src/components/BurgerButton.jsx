@@ -1,7 +1,6 @@
-import { MotionConfig, motion } from "framer-motion";
-
-export const BurgerButton = ({ open, setopen }) => {
+export const BurgerButton = ({ open, setopen, MotionConfig, motion }) => {
   const bgtheme = `${open ? "bg-primary_dark" : "bg-primary_light"}`;
+
   return (
     <MotionConfig
       transition={{

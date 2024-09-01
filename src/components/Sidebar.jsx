@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -120,7 +120,12 @@ const Sidebar = ({ navLinks }) => {
         role="button"
         style={{ transform: "translateX(20px) scale(0.5)" }}
       >
-        <BurgerButton open={open} setopen={setopen} />
+        <BurgerButton
+          open={open}
+          setopen={setopen}
+          motion={motion}
+          MotionConfig={MotionConfig}
+        />
       </motion.div>
 
       <AnimatePresence>
