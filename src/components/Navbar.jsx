@@ -5,7 +5,7 @@ import Image from "next/image";
 import DarkMode from "./DarkMode";
 
 const navLinks = [
-  { href: "/", value: "Home" },
+  { href: "/SKYCLOUD", value: "SKYCLOUD" },
   { href: "/contact-us", value: "Contact Us" },
   { href: "/about-us", value: "About" },
   { href: "/products", value: "Our Products" },
@@ -55,7 +55,7 @@ const Navbar = () => {
 
       <header
         role="banner"
-        className="site_header transition-all bg-primary_dark text-primary_light py-[10px] shadow-md"
+        className="site_header transition-colors duration-500 bg-primary_dark text-primary_light py-[10px] shadow-md"
       >
         {/* <AnimatePresence>
           <motion.nav
@@ -81,14 +81,21 @@ const Navbar = () => {
 
           <ul
             // <motion.ul
-            className="md:flex hidden font-sans"
+            className="hidden md:flex items-center font-sans"
             variants={navLinkVars}
           >
             {navLinks.map((link) => (
               <li key={link.href}>
                 {/*________________ ++ LINKS ++ _________________ */}
 
-                <Link className={`px-[8px] pb-[2px]`} href={link.href}>
+                <Link
+                  className={`px-[8px] pb-[2px] ${
+                    link.value === "SKYCLOUD"
+                      ? "text-2xl text-sky-300 font-bold"
+                      : ""
+                  }`}
+                  href={link.href}
+                >
                   {link.value}
                   {link.value === "Products" && (
                     <span
