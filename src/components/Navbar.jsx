@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Sidebar from "@/components/Sidebar";
-import Image from "next/image";
+// import Image from "next/image";
 import DarkMode from "./DarkMode";
+import Logo from "./Svgs/logo.svg";
 
 const navLinks = [
   { href: "/contact-us", value: "Contact Us" },
@@ -33,11 +34,9 @@ const Navbar = () => {
           {/*________________ ++ LOGO ++ _________________ */}
 
           <div className="logo">
-            <h1 className="text-[1.5rem] md:text-[1.813rem] text-left font-serif ">
-              <Link href="/">
-                <Image width={60} height={60} src="/logo.png" alt="Logo" />
-              </Link>
-            </h1>
+            <Link href="/">
+              <Logo className="text-7xl h-12" />
+            </Link>
           </div>
 
           <ul className="hidden md:flex items-center font-sans">

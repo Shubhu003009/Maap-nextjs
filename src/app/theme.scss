@@ -1,29 +1,57 @@
 [data-theme="light-mode"] {
-  --primary: 174, 229, 194; //#afe6c3
-  --primary_light: 243, 243, 243; //#f3f3f3
-  --primary_bright: 48, 212, 111; //#30d46f
-  --primary_dark: 1, 73, 60; //#01493c
-  --secondary: 233, 237, 255; //#e9edff
+  // --primary: 174, 229, 194; //#afe6c3
+  // --primary_light: 243, 243, 243; //#f3f3f3
+  // --primary_bright: 48, 212, 111; //#30d46f
+  // --primary_dark: 1, 73, 60; //#01493c
+  // --secondary: 233, 237, 255; //#e9edff
+
+  // --primary1: #afe6c3;
+  // --primary_light1: #f3f3f3;
+  // --primary_bright1: #30d46f;
+  // --secondary1: #e9edff;
+
+  --primary: 6, 203, 247; // #06cbf7
+  --primary_light: 255, 254, 245; //#fcfbf5
+  --primary_bright: 13, 124, 130; //#0d7e84
+  --primary_dark: 33, 44, 68; //#212c44
+
+  --secondary: 241, 59, 84;
   --secondary_light: 233, 237, 255; //#e9edff
 
-  --primary1: #afe6c3;
-  --primary_light1: #f3f3f3;
-  --primary_bright1: #30d46f;
-  --primary_dark1: #01493c;
-  --secondary1: #e9edff;
+  --primary1: #06cbf7;
+  --primary_light1: rgb(255, 254, 245);
+  --primary_light1: #fffef5;
+  --primary_bright1: #0d7e84;
+  --primary_dark1: #212c44;
+
+  // --secondary1: #d4580d;
+  --secondary1: rgb(241, 59, 84);
+
   --secondary1_light: #e9edff;
 }
 
 [data-theme="dark-mode"] {
-  --primary: 1, 73, 60; //#01493c
-  --primary_light: 1, 73, 60; //#01493c
-  --primary_bright: 48, 212, 111; //#30d46f
-  --primary_dark: 243, 243, 243; //#f3f3f3
+  --primary: 33, 44, 68; //#212c44
+  --primary_light: 33, 44, 68; //#212c44
+  --primary_bright: 13, 124, 130; //#0d7e84
+  --primary_dark: 252, 251, 245; //#f3f3f3
   --secondary: 233, 237, 255; //#e9edff
 
-  --primary1: #01493c;
-  --primary_light1: #30d46f;
+  // --primary: 1, 73, 60; //#01493c
+  // --primary_light: 1, 73, 60; //#01493c
+  // --primary_bright: 48, 212, 111; //#30d46f
+  // --primary_dark: 243, 243, 243; //#f3f3f3
+  // --secondary: 233, 237, 255; //#e9edff
+
+  --primary1: #212c44;
+  --primary_light1: #212c44;
   --primary_bright1: #f3f3f3;
-  --primary_dark1: #afe6c3;
+  --primary_dark1: #06cbf7;
   --secondary1: #e9edff;
+
+  // --primary1: #01493c;
+  // --primary_light1: #30d46f;
+  // --primary_bright1: #f3f3f3;
+  // --primary_dark1: #afe6c3;
+  // --secondary1: #e9edff;
 }

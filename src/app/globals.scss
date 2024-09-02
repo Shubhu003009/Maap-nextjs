@@ -94,15 +94,9 @@ h6 {
 }
 
 .site_layout {
-  max-width: 1024px;
-  margin: auto;
-  padding-block: 100px;
-  padding-inline: 10px;
-}
-.site_layout_lg {
-  max-width: 1280px;
-  margin: auto;
-  padding-inline: 5px;
+  @apply max-w-5xl m-auto py-12 md:py-24 px-3 md:px-5;
 }
 
-@import "./genericStyles.scss";
+.site_layout_lg {
+  @apply max-w-7xl m-auto px-2;
+}
