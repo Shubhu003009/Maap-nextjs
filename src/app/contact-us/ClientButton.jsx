@@ -1,7 +1,5 @@
 "use client";
 
-import Button from "@/components/ui/Button";
-
 const validateForm = (event) => {
   event.preventDefault();
 
@@ -79,7 +77,7 @@ const validateForm = (event) => {
   }
 };
 
-export default function ClientButton({ children }) {
+const ClientButton = ({ children }) => {
   return (
     <button
       className="shadow bg-teal-400 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
@@ -89,4 +87,6 @@ export default function ClientButton({ children }) {
       {children}
     </button>
   );
-}
+};
+
+export default ClientButton;
