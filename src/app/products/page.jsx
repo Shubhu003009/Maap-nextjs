@@ -1,5 +1,5 @@
-const Products = () => {
+const Page = () => {
   return <h3 className="text-center">products</h3>;
 };
 
-export default Products;
+export default Page;

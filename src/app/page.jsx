@@ -1,7 +1,7 @@
-import Button from "@/components/ui/Button";
+import Button from "@/components/Button";
 import Link from "next/link";
 
-export default function Home() {
+export default function Page() {
   return (
     <>
       <main className="site_layout" id="main-content" role="main">

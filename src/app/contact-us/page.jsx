@@ -1,9 +1,9 @@
-import ClientButton from "./ClientButton";
+import ClientButton from "@/components/ClientButton";
 
 const Page = () => {
   return (
     <div className="site_layout">
-      <div className="grid place-content-center">
+      <div className="grid place-content-center px-5">
         <form className="w-full max-w-lg" noValidate>
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -15,6 +15,7 @@ const Page = () => {
               </label>
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                name="firstname"
                 id="grid-first-name"
                 type="text"
                 placeholder="Jane"
@@ -39,6 +40,7 @@ const Page = () => {
               </label>
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                name="lastname"
                 id="grid-last-name"
                 type="text"
                 placeholder="Doe"
@@ -65,6 +67,7 @@ const Page = () => {
               </label>
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                name="email"
                 id="email"
                 type="email"
                 placeholder="you@example.com"
@@ -89,8 +92,9 @@ const Page = () => {
               >
                 Message
               </label>
-              <input
+              <textarea
                 className="block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
+                name="message"
                 id="message"
                 placeholder="Your message here..."
                 pattern="^.{10,500}$"
@@ -98,7 +102,7 @@ const Page = () => {
                 minLength="10"
                 maxLength="500"
                 required
-              />
+              ></textarea>
               <p
                 className="text-red-500 text-xs italic hidden"
                 id="message-error"
