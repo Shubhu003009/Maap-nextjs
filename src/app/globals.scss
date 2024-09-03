@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import "./theme.scss";
+// _________________________> GLOBAL STYLES <_________________________ //
 
 :root {
   --radius: 6px;
@@ -18,11 +19,10 @@
 
 a,
 button {
-  @apply hover:underline focus-visible:outline rounded-sm focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary_light;
+  @apply uppercase focus-visible:outline-1 rounded focus-visible:-outline-offset-2 focus-visible:outline-para;
 }
-
-:focus-visible {
-  outline: none;
+button {
+  @apply focus-visible:outline-offset-2;
 }
 
 html {
@@ -44,20 +44,6 @@ svg {
   max-width: 100%;
 }
 
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-button {
-  border: none;
-  padding: 3px;
-  cursor: pointer;
-  background: transparent;
-}
-
 p,
 h1,
 h2,
@@ -66,7 +52,14 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+p {
   text-wrap: pretty;
+}
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
 }
 
 #root,
@@ -94,9 +87,22 @@ h6 {
 }
 
 .site_layout {
-  @apply max-w-5xl m-auto py-12 md:py-24 px-3 md:px-5;
+  @apply max-w-5xl m-auto py-10 md:py-20;
 }
 
 .site_layout_lg {
   @apply max-w-7xl m-auto px-2;
+}
+// _________________________> MY STYLES <_________________________ //;
+
+input:user-valid {
+  @apply border-green-500;
+}
+input:user-invalid {
+  @apply border-red-500;
+}
+input:user-invalid {
+  & + p {
+    display: block;
+  }
 }

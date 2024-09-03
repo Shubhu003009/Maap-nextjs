@@ -1,57 +1,34 @@
 [data-theme="light-mode"] {
-  // --primary: 174, 229, 194; //#afe6c3
-  // --primary_light: 243, 243, 243; //#f3f3f3
-  // --primary_bright: 48, 212, 111; //#30d46f
-  // --primary_dark: 1, 73, 60; //#01493c
-  // --secondary: 233, 237, 255; //#e9edff
+  --primary: rgb(6, 203, 247); //#06cbf7
+  --primary_light: rgb(255, 254, 245); //#fcfbf5
+  --primary_bright: rgb(13, 126, 132); //#0d7e84
+  --primary_dark: rgb(33, 44, 68); //#212c44
+  --primary_dark2: rgb(123, 139, 172); //#7b8bac
 
-  // --primary1: #afe6c3;
-  // --primary_light1: #f3f3f3;
-  // --primary_bright1: #30d46f;
-  // --secondary1: #e9edff;
+  --primary_sky: rgb(56 189 248 / 0.9); //#06cbf7
 
-  --primary: 6, 203, 247; // #06cbf7
-  --primary_light: 255, 254, 245; //#fcfbf5
-  --primary_bright: 13, 124, 130; //#0d7e84
-  --primary_dark: 33, 44, 68; //#212c44
+  --para: #131313;
+  --bg_para: #ffffff;
 
-  --secondary: 241, 59, 84;
-  --secondary_light: 233, 237, 255; //#e9edff
+  --secondary: rgb(242, 104, 24); // #f26818
+  // --secondary2: rgb(241, 59, 84); //#f13b54
 
-  --primary1: #06cbf7;
-  --primary_light1: rgb(255, 254, 245);
-  --primary_light1: #fffef5;
-  --primary_bright1: #0d7e84;
-  --primary_dark1: #212c44;
-
-  // --secondary1: #d4580d;
-  --secondary1: rgb(241, 59, 84);
-
-  --secondary1_light: #e9edff;
+  --tertiary_light: rgb(233, 237, 255); //#e9edff
 }
 
 [data-theme="dark-mode"] {
-  --primary: 33, 44, 68; //#212c44
-  --primary_light: 33, 44, 68; //#212c44
-  --primary_bright: 13, 124, 130; //#0d7e84
-  --primary_dark: 252, 251, 245; //#f3f3f3
-  --secondary: 233, 237, 255; //#e9edff
+  --primary: rgb(33, 44, 68);
+  --primary_light: rgb(33, 44, 68);
+  --primary_bright: rgb(243, 243, 243);
+  --primary_dark: rgb(6, 203, 247);
+  --primary_dark2: rgb(242, 242, 242);
 
-  // --primary: 1, 73, 60; //#01493c
-  // --primary_light: 1, 73, 60; //#01493c
-  // --primary_bright: 48, 212, 111; //#30d46f
-  // --primary_dark: 243, 243, 243; //#f3f3f3
-  // --secondary: 233, 237, 255; //#e9edff
+  --primary_sky: rgb(56 189 248 / 0.9); //#06cbf7
 
-  --primary1: #212c44;
-  --primary_light1: #212c44;
-  --primary_bright1: #f3f3f3;
-  --primary_dark1: #06cbf7;
-  --secondary1: #e9edff;
+  --para: #ffffff;
+  --bg_para: #131313;
 
-  // --primary1: #01493c;
-  // --primary_light1: #30d46f;
-  // --primary_bright1: #f3f3f3;
-  // --primary_dark1: #afe6c3;
-  // --secondary1: #e9edff;
+  --secondary: rgb(242, 104, 24);
+
+  --tertiary_light: rgb(233, 237, 255);
 }

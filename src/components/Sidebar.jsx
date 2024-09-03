@@ -113,10 +113,11 @@ const Sidebar = ({ navLinks }) => {
       },
     },
   };
+
   return (
     <>
       <motion.div
-        className="block md:hidden relative  z-10"
+        className="block md:hidden relative z-10"
         role="button"
         style={{ transform: "translateX(20px) scale(0.5)" }}
       >
@@ -136,7 +137,7 @@ const Sidebar = ({ navLinks }) => {
             animate="open"
             exit="exit"
             className={
-              "touch-none flex flex-col justify-center md:hidden fixed inset-0 p-6 space-y-10 origin-left text-primary_dark bg-primary backdrop-blur-[10px]"
+              "transition-colors duration-300 touch-none flex flex-col justify-center md:hidden fixed inset-0 p-6 space-y-10 origin-left text-para bg-bg_para backdrop-blur-[10px]"
             }
           >
             <motion.ul
@@ -145,10 +146,7 @@ const Sidebar = ({ navLinks }) => {
             >
               <li className="overflow-hidden">
                 <motion.div variants={sideBarLinkVars}>
-                  <DarkMode
-                    outerColor="bg-primary_dark"
-                    innerColor="bg-primary"
-                  />
+                  <DarkMode />
                 </motion.div>
               </li>
               {navLinks.map((link) => (
@@ -162,11 +160,9 @@ const Sidebar = ({ navLinks }) => {
               ))}
             </motion.ul>
 
-            <div className="overflow-hidden">
-              <div className="w-full bg-primary_dark h-px"></div>
-            </div>
+            <div className="divider-line w-full bg-primary_sky h-px"></div>
 
-            <ul className="flex flex-wrap gap-1 items-center justify-center">
+            <ul className="flex flex-wrap gap-1 items-center justify-center scale-95">
               {socialLinks.map((link) => (
                 <Link key={link.href} href={link.href} target={link.target}>
                   <li

@@ -1,6 +1,5 @@
 export const BurgerButton = ({ open, setopen, MotionConfig, motion }) => {
-  const bgtheme = `${open ? "bg-primary_dark" : "bg-primary_light"}`;
-
+  const bgtheme = `bg-para`;
   return (
     <MotionConfig
       transition={{
@@ -13,9 +12,7 @@ export const BurgerButton = ({ open, setopen, MotionConfig, motion }) => {
         onClick={() => {
           setopen((pv) => !pv);
         }}
-        className={`relative h-20 w-20 rounded-full transition-colors duration-300 ${
-          open ? "hover:bg-primary_dark/20" : "hover:bg-primary_light/20"
-        }`}
+        className={`[&>span]:transition-colors [&>span]:duration-500 relative h-20 w-20 rounded-full`}
       >
         <motion.span
           variants={VARIANTS.top}

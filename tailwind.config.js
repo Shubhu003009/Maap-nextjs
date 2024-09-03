@@ -10,6 +10,12 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+    // fontSize: {
+    //   sm: ['14px', '20px'],
+    //   base: ['16px', '24px'],
+    //   lg: ['20px', '28px'],
+    //   xl: ['24px', '32px'],
+    // },
     screens: {
       xs: "375px",
       sm: "640px",
@@ -26,27 +32,45 @@ module.exports = {
       },
     },
     extend: {
+      keyframes: {
+        ripple: {
+          "0%": { transform: "scale(0)", opacity: "1" },
+          "100%": { transform: "scale(4)", opacity: "0" },
+        },
+      },
+      animation: {
+        ripple: "ripple 0.6s linear",
+      },
+      variants: {
+        extend: {
+          animation: ["group-hover"],
+        },
+      },
+
+      gridTemplateColumns: {
+        custom: "4px repeat(3, calc((100% - 48px - 20px * 2) / 3)) 4px",
+        custom_md: "12px repeat(6, calc((100% - 80px - 28px * 5) / 6)) 12px",
+      },
       colors: {
         // CUSTOM_COLORS
-        primary: "rgba(var(--primary))", //#afe6c3
-        primary_light: "rgba(var(--primary_light))", //#f3f3f3
-        primary_bright: "rgba(var(--primary_bright))", //#30d46f
-        primary_dark: "rgba(var(--primary_dark))", //#01493c
-        secondary: "rgba(var(--secondary))", //#e9edff
+
+        primary_sky: "var(--primary_sky)",
+        primary: "var(--primary)", //#afe6c3
+        primary_light: "var(--primary_light)", //#f3f3f3
+        primary_bright: "var(--primary_bright)", //#30d46f
+        primary_dark: "var(--primary_dark)", //#01493c
+        primary_dark2: "var(--primary_dark2)", //#01493c
+        secondary: "var(--secondary)", //#e9edff
+        tertiary_light: "var(--tertiary_light)", //#e9edff
+        para: "var(--para)",
+        bg_para: "var(--bg_para)",
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        // primary: {
-        //   DEFAULT: "hsl(var(--primary))",
-        //   foreground: "hsl(var(--primary-foreground))",
-        // },
-        // secondary: {
-        //   DEFAULT: "hsl(var(--secondary))",
-        //   foreground: "hsl(var(--secondary-foreground))",
-        // },
+
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",

@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
       <html lang="en" className={`${poppins.className} relative`}>
         <body
           className={
-            "min-h-screen bg-primary_light text-primary_dark transition-colors duration-500"
+            "min-h-screen text-para bg-bg_para transition-all duration-300"
           }
         >
           <Navbar />
