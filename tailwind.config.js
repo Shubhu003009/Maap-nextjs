@@ -21,7 +21,7 @@ module.exports = {
       sm: "640px",
       md: "768px",
       lg: "1024px",
-      xl: "1280px",
+      xl: "1200px",
       "2xl": "1536px",
     },
     container: {
@@ -50,6 +50,7 @@ module.exports = {
       gridTemplateColumns: {
         custom: "4px repeat(3, calc((100% - 48px - 20px * 2) / 3)) 4px",
         custom_md: "12px repeat(6, calc((100% - 80px - 28px * 5) / 6)) 12px",
+        custom_lg: "1fr repeat(12, calc((69.375rem - 28px * 11) / 12)) 1fr",
       },
       colors: {
         // CUSTOM_COLORS

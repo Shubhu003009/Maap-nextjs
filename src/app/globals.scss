@@ -87,11 +87,14 @@ h3 {
 }
 
 .site_layout {
-  @apply max-w-5xl m-auto py-10 md:py-20;
+  @apply max-w-[69.375rem] mx-auto py-10 md:py-20;
+}
+.site_padding {
+  @apply py-10 md:py-20;
 }
 
 .site_layout_lg {
-  @apply max-w-7xl m-auto px-2;
+  @apply max-w-7xl mx-auto px-2;
 }
 // _________________________> MY STYLES <_________________________ //;
 
