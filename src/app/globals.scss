@@ -90,7 +90,7 @@ h3 {
   @apply max-w-[69.375rem] mx-auto py-10 md:py-20;
 }
 .site_padding {
-  @apply py-10 md:py-20;
+  @apply py-16 md:py-20;
 }
 
 .site_layout_lg {
@@ -108,4 +108,25 @@ input:user-invalid {
   & + p {
     display: block;
   }
+}
+
+.ff_h1 {
+  font-size: 2.25rem;
+  font-size: clamp(2.25rem, 0.9166666666666667rem + 2.7777777777777777vw, 3rem);
+  line-height: 1;
+}
+
+.ff_para {
+  font-size: 1rem;
+  font-size: clamp(
+    1rem,
+    0.7777777777777778rem + 0.4629629629629629vw,
+    1.125rem
+  );
+  line-height: 1.625;
+}
+
+* .bg-bg_para,
+* .text-para {
+  @apply transition-colors duration-300;
 }

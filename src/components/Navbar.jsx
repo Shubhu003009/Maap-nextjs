@@ -21,7 +21,7 @@ const Navbar = () => {
 
       <header
         role="banner"
-        className="site_header transition-all duration-300 text-para"
+        className="site_header mt-6 transition-all duration-300 text-para"
       >
         <nav
           className="navbar site_layout_lg flex justify-between items-center h-12 lg:h-auto"
