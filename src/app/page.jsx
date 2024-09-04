@@ -6,7 +6,7 @@ export default function Page() {
     <>
       <main className="site_padding" id="main-content" role="main">
         <section
-          className="overflow-hidden items-center hero grid grid-cols-custom md:grid-cols-custom_md xl:grid-cols-custom_lg gap-y-16 gap-x-5 md:gap-x-7 content-start"
+          className="overflow-hidden min-h-svh items-center hero grid grid-cols-custom md:grid-cols-custom_md xl:grid-cols-custom_lg gap-y-16 gap-x-5 md:gap-x-7 content-start"
           id="home"
           aria-labelledby="home-heading"
         >
