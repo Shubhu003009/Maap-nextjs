@@ -1,12 +1,58 @@
 import Navbar from "@/components/Navbar";
 import "./globals.scss";
 import { ThemeProvider } from "@/contexts/Theme";
-import { Poppins } from "next/font/google";
+import {
+  Lato,
+  DM_Sans,
+  Poppins,
+  Josefin_Sans,
+  Oswald,
+  Open_Sans,
+  Lora,
+  Mulish,
+  Lexend_Deca,
+} from "next/font/google";
 
-const poppins = Poppins({
-  weight: ["200", "300", "400", "600", "700"],
+const lato = Lato({
+  weight: ["100", "300", "400", "700", "900"],
+  variable: "--font-lato",
   subsets: ["latin"],
-  display: "swap",
+});
+const lexend_Deca = Lexend_Deca({
+  variable: "--font-lexend_Deca",
+  subsets: ["latin"],
+});
+const mulish = Mulish({
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-mulish",
+  subsets: ["latin"],
+});
+const lora = Lora({
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-lora",
+  subsets: ["latin"],
+});
+const oswald = Oswald({
+  variable: "--font-oswald",
+  subsets: ["latin"],
+});
+const open_Sans = Open_Sans({
+  variable: "--font-open_Sans",
+  weight: ["400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+});
+const dmSans = DM_Sans({
+  variable: "--font-dmSans",
+  subsets: ["latin"],
+});
+const josefinSans = Josefin_Sans({
+  variable: "--font-josefinSans",
+  subsets: ["latin"],
+});
+const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-poppins",
+  subsets: ["latin"],
 });
 
 export const metadata = {
@@ -32,31 +78,18 @@ export const metadata = {
   },
 };
 
-export const HtmlComment = ({ text }) => {
-  const html = `<!-- ${text} -->`;
-  const callback = (instance) => {
-    if (instance) {
-      instance.outerHTML = html;
-    }
-  };
-  return (
-    <script
-      ref={callback}
-      type="text/comment"
-      dangerouslySetInnerHTML={{ __html: html }}
-    />
-  );
-};
-
 export default function RootLayout({ children }) {
   return (
     <ThemeProvider>
-      <html lang="en" className={`${poppins.className} relative`}>
-        <body
-          className={
-            "text-para bg-bg_para transition-all duration-300"
-          }
-        >
+      <html
+        lang="en"
+        className={`
+          relative font-mulish
+          ${lora.variable} 
+          ${mulish.variable} 
+          `}
+      >
+        <body className={"text-para bg-bg_para transition-all duration-300"}>
           <Navbar />
           {children}
         </body>

@@ -77,10 +77,9 @@ const Sidebar = ({ navLinks }) => {
       },
     },
     exit: {
-      x: "-50%",
-      opacity: 0,
+      x: "-100%",
       transition: {
-        duration: 0.5,
+        duration: 0.8,
         ease: [0.075, 0.82, 0.165, 1.0],
       },
     },
@@ -160,7 +159,7 @@ const Sidebar = ({ navLinks }) => {
               ))}
             </motion.ul>
 
-            <div className="divider-line w-full bg-primary_sky h-px"></div>
+            <div className="divider-line w-full bg-green-600 h-px"></div>
 
             <ul className="flex flex-wrap gap-1 items-center justify-center scale-95">
               {socialLinks.map((link) => (

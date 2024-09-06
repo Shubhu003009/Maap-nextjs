@@ -1,8 +1,14 @@
-const Button = ({ children }) => {
+import Link from "next/link";
+
+const Button = ({ href = "!#", children }) => {
   return (
-    <button className="middle none center rounded-lg bg-green-600 py-3 px-4 md:py-4 md:px-7 text-sm font-bold uppercase text-white shadow-md shadow-green-600/20 transition-all hover:shadow-lg hover:shadow-green-600/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+    <Link
+      href={href}
+      role="button"
+      className="inline-block focus-visible:outline-offset-4  middle none center rounded-lg bg-[linear-gradient(to_right,_#828dff,_#7cddff)]  py-3 px-4 md:py-4 md:px-7 text-base md:text-lg md:tracking-normal font-bold uppercase text-white shadow-sm shadow-green-600/20 transition-all hover:shadow-lg hover:shadow-green-600/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+    >
       {children}
-    </button>
+    </Link>
   );
 };
 

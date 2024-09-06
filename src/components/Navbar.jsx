@@ -36,7 +36,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <ul className="hidden md:flex items-center font-light">
+          <ul className="hidden md:flex items-center">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link className={`px-[8px] pb-[2px]`} href={link.href}>

@@ -10,12 +10,6 @@ module.exports = {
   ],
   prefix: "",
   theme: {
-    // fontSize: {
-    //   sm: ['14px', '20px'],
-    //   base: ['16px', '24px'],
-    //   lg: ['20px', '28px'],
-    //   xl: ['24px', '32px'],
-    // },
     screens: {
       xs: "375px",
       sm: "640px",
@@ -32,6 +26,10 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        lora: ["var(--font-lora)"],
+        mulish: ["var(--font-mulish)"],
+      },
       keyframes: {
         ripple: {
           "0%": { transform: "scale(0)", opacity: "1" },

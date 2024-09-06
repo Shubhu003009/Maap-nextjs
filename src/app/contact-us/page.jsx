@@ -2,7 +2,7 @@ import ClientButton from "@/components/ClientButton";
 
 const Page = () => {
   return (
-    <div className="site_layout">
+    <div className="site_layout site_padding">
       <div className="grid place-content-center px-5">
         <form className="w-full max-w-lg" noValidate>
           <div className="flex flex-wrap -mx-3 mb-6">

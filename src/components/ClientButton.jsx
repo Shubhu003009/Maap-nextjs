@@ -68,19 +68,13 @@ const validateForm = (event) => {
     lastName.value = "";
     email.value = "";
     message.value = "";
-
-    // Clear the errors
-    firstNameError.textContent = "";
-    lastNameError.textContent = "";
-    emailError.textContent = "";
-    messageError.textContent = "";
   }
 };
 
 const ClientButton = ({ children }) => {
   return (
     <button
-      className="shadow bg-teal-400 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+      className="inline-block focus-visible:outline-offset-4  middle none center rounded-lg bg-[linear-gradient(to_right,_#828dff,_#7cddff)]  py-3 px-4 md:py-4 md:px-7 text-sm font-bold uppercase text-white shadow-md shadow-green-600/20 transition-all hover:shadow-lg hover:shadow-green-600/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
       type="submit"
       onClick={validateForm}
     >
