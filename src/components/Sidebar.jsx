@@ -16,7 +16,7 @@ const Sidebar = ({ navLinks }) => {
       ? document.body.classList.add("overflow-hidden")
       : document.body.classList.remove("overflow-hidden");
   }
-  
+
   const sidebarVars = {
     close: {
       x: "-100%",
@@ -124,17 +124,6 @@ const Sidebar = ({ navLinks }) => {
             <div className="divider-line w-full bg-green-600 h-px"></div>
 
             <SocialLinks />
-
-            {/* <ul className="flex flex-wrap gap-1 items-center justify-center scale-75">
-              {socialLinks.map((link) => (
-                <Link key={link.href} href={link.href} target={link.target}>
-                  <li
-                    onClick={() => setopen(false)}
-                    dangerouslySetInnerHTML={{ __html: link.value }}
-                  ></li>
-                </Link>
-              ))}
-            </ul> */}
           </motion.aside>
         )}
       </AnimatePresence>
