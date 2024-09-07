@@ -10,7 +10,7 @@ export default function Page() {
           aria-labelledby="home-heading"
         >
           <div className="col-start-2 -col-end-2 md:col-end-5 xl:col-end-8 space-y-5 md:space-y-8">
-            <h1 className="ff_h1" id="home-heading">
+            <h1 className="font-lora ff_h1" id="home-heading">
               Mountabu Agro Products
             </h1>
             <div className="md:text-lg ff_para text-para">

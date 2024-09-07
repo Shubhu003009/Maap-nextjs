@@ -26,6 +26,9 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        bg_radial_darkblue: "var(--bg_radial_darkblue)",
+      },
       fontFamily: {
         lora: ["var(--font-lora)"],
         mulish: ["var(--font-mulish)"],
@@ -62,6 +65,7 @@ module.exports = {
         secondary: "var(--secondary)", //#e9edff
         tertiary_light: "var(--tertiary_light)", //#e9edff
         para: "var(--para)",
+        para_blue: "var(--para_blue)",
         bg_para: "var(--bg_para)",
 
         border: "hsl(var(--border))",

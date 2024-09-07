@@ -12,10 +12,27 @@ export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(null);
 
   useEffect(() => {
+    // let lastScrollY = 0;
+    // let nav = document.getElementById("header");
+    // const scrollY = window.addEventListener("scroll", () => {
+    //   let currentScrollY = window.scrollY;
+    //   if (currentScrollY > lastScrollY) {
+    //     console.log("scroll Down");
+    //     nav.classList.add("nav_hidden");
+    //   } else {
+    //     console.log("scroll up");
+    //     nav.classList.remove("nav_hidden");
+    //   }
+    //   lastScrollY = currentScrollY;
+    // });
     const theme =
       JSON.parse(localStorage.getItem("color_theme")) || "light-mode";
     setTheme(theme);
     setHydrated(true);
+
+    // return () => {
+    //   window.removeEventListener("scroll", scrollY);
+    // };
   }, []);
 
   useEffect(() => {

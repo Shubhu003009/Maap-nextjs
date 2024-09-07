@@ -16,13 +16,29 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+a::after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  background-color: #06cbf7;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  transition: 150ms ease-in;
+}
+a:hover::after {
+  width: 30px;
+}
 a,
 button {
   @apply uppercase focus-visible:outline-1 rounded focus-visible:outline-para;
 }
 button {
   @apply focus-visible:outline-offset-4;
+}
+li {
+  width: max-content;
+  position: relative;
 }
 
 html {
@@ -87,7 +103,8 @@ p {
 // _________________________> MY STYLES <_________________________ //;
 
 * .bg-bg_para,
-* .text-para {
+* .text-para,
+* .bg-bg_radial_darkblue {
   @apply transition-colors duration-300;
 }
 

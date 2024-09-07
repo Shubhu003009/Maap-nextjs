@@ -6,14 +6,15 @@ import { useState } from "react";
 
 import { BurgerButton } from "./BurgerButton";
 import DarkMode from "./DarkMode";
+import SocialLinks from "./Ui/SocialLinks";
 
 const Sidebar = ({ navLinks }) => {
   const [open, setopen] = useState(false);
 
   if (typeof window !== "undefined") {
     open
-      ? document.body.classList.add("fixed", "inset-0")
-      : document.body.classList.remove("fixed", "inset-0");
+      ? document.body.classList.add("overflow-hidden")
+      : document.body.classList.remove("overflow-hidden");
   }
 
   const socialLinks = [
@@ -116,8 +117,7 @@ const Sidebar = ({ navLinks }) => {
   return (
     <>
       <motion.div
-        className="block md:hidden relative z-10"
-        role="button"
+        className="block md:hidden relative z-20"
         style={{ transform: "translateX(20px) scale(0.5)" }}
       >
         <BurgerButton
@@ -136,16 +136,23 @@ const Sidebar = ({ navLinks }) => {
             animate="open"
             exit="exit"
             className={
-              "transition-colors duration-300 touch-none flex flex-col justify-center md:hidden fixed inset-0 p-6 space-y-10 origin-left text-para bg-bg_para backdrop-blur-[10px]"
+              "z-10 text-para bg-bg_radial_darkblue transition-colors duration-300 touch-none flex flex-col justify-center md:hidden fixed inset-0 p-6 space-y-10 origin-left "
             }
           >
             <motion.ul
-              className="text-4xl space-y-5 font-bold tracking-tighter"
+              className="text-3xl space-y-5 font-bold tracking-tighter"
               variants={containerVars}
             >
               <li className="overflow-hidden">
                 <motion.div variants={sideBarLinkVars}>
                   <DarkMode />
+                </motion.div>
+              </li>
+              <li className="overflow-hidden">
+                <motion.div variants={sideBarLinkVars}>
+                  <Link href="/" onClick={() => setopen(false)}>
+                    Home
+                  </Link>
                 </motion.div>
               </li>
               {navLinks.map((link) => (
@@ -161,7 +168,9 @@ const Sidebar = ({ navLinks }) => {
 
             <div className="divider-line w-full bg-green-600 h-px"></div>
 
-            <ul className="flex flex-wrap gap-1 items-center justify-center scale-95">
+            <SocialLinks />
+
+            {/* <ul className="flex flex-wrap gap-1 items-center justify-center scale-75">
               {socialLinks.map((link) => (
                 <Link key={link.href} href={link.href} target={link.target}>
                   <li
@@ -170,7 +179,7 @@ const Sidebar = ({ navLinks }) => {
                   ></li>
                 </Link>
               ))}
-            </ul>
+            </ul> */}
           </motion.aside>
         )}
       </AnimatePresence>

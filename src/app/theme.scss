@@ -1,34 +1,52 @@
 [data-theme="light-mode"] {
-  --primary: rgb(6, 203, 247); //#06cbf7
-  --primary_light: rgb(255, 254, 245); //#fcfbf5
-  --primary_bright: rgb(13, 126, 132); //#0d7e84
-  --primary_dark: rgb(33, 44, 68); //#212c44
-  --primary_dark2: rgb(123, 139, 172); //#7b8bac
+  --primary: #06cbf7;
+  --primary_light: #fffef5;
+  --primary_bright: #0d7e84;
+  --primary_dark: #212c44;
+  --primary_dark2: #7b8bac;
 
-  --primary_sky: rgb(56 189 248 / 0.9); //#06cbf7
+  --primary_sky: #38bdf8e6;
 
   --para: #131313;
+  --para_blue: #e9edff;
   --bg_para: #ffffff;
 
-  --secondary: rgb(242, 104, 24); // #f26818
-  // --secondary2: rgb(241, 59, 84); //#f13b54
+  --secondary: #f26818;
 
-  --tertiary_light: rgb(233, 237, 255); //#e9edff
+  --tertiary_light: #e9edff;
+
+  --bg_radial_darkblue: radial-gradient(
+    farthest-side circle at 50% 0% in oklab,
+    hsl(196 100% 100%) 0%,
+    oklch(73% 0.08 206) 238% 238%
+  );
+
+  --color-front: #000;
+  --color-back: #fff;
 }
 
 [data-theme="dark-mode"] {
-  --primary: rgb(33, 44, 68);
-  --primary_light: rgb(33, 44, 68);
-  --primary_bright: rgb(243, 243, 243);
-  --primary_dark: rgb(6, 203, 247);
-  --primary_dark2: rgb(242, 242, 242);
+  --primary: #212c44;
+  --primary_light: #212c44;
+  --primary_bright: #f3f3f3;
+  --primary_dark: #06cbf7;
+  --primary_dark2: #f2f2f2;
 
-  --primary_sky: rgb(56 189 248 / 0.9); //#06cbf7
+  --primary_sky: #38bdf8e6;
 
   --para: #ffffff;
+  --para_blue: #00182e;
   --bg_para: #131313;
 
-  --secondary: rgb(242, 104, 24);
+  --secondary: #f26818;
 
-  --tertiary_light: rgb(233, 237, 255);
+  --tertiary_light: #131313;
+  --bg_radial_darkblue: radial-gradient(
+    farthest-side circle at 50% 0% in oklab,
+    oklch(18% 0.5 191) 0%,
+    oklch(0% 0.29 200) 238% 238%
+  );
+
+  --color-back: #000;
+  --color-front: #fff;
 }

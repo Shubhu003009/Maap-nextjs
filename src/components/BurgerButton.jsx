@@ -13,6 +13,7 @@ export const BurgerButton = ({ open, setopen, MotionConfig, motion }) => {
           setopen((pv) => !pv);
         }}
         className={`[&>span]:transition-colors [&>span]:duration-500 relative h-20 w-20 rounded-full`}
+        aria-label="sidebar"
       >
         <motion.span
           variants={VARIANTS.top}

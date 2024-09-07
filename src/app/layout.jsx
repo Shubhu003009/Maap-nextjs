@@ -1,57 +1,15 @@
 import Navbar from "@/components/Navbar";
 import "./globals.scss";
 import { ThemeProvider } from "@/contexts/Theme";
-import {
-  Lato,
-  DM_Sans,
-  Poppins,
-  Josefin_Sans,
-  Oswald,
-  Open_Sans,
-  Lora,
-  Mulish,
-  Lexend_Deca,
-} from "next/font/google";
+import { Lora, Mulish } from "next/font/google";
+import Footer from "@/components/Footer";
 
-const lato = Lato({
-  weight: ["100", "300", "400", "700", "900"],
-  variable: "--font-lato",
-  subsets: ["latin"],
-});
-const lexend_Deca = Lexend_Deca({
-  variable: "--font-lexend_Deca",
-  subsets: ["latin"],
-});
 const mulish = Mulish({
-  weight: ["200", "300", "400", "500", "600", "700", "800"],
   variable: "--font-mulish",
   subsets: ["latin"],
 });
 const lora = Lora({
-  weight: ["400", "500", "600", "700"],
   variable: "--font-lora",
-  subsets: ["latin"],
-});
-const oswald = Oswald({
-  variable: "--font-oswald",
-  subsets: ["latin"],
-});
-const open_Sans = Open_Sans({
-  variable: "--font-open_Sans",
-  weight: ["400", "500", "600", "700", "800"],
-  subsets: ["latin"],
-});
-const dmSans = DM_Sans({
-  variable: "--font-dmSans",
-  subsets: ["latin"],
-});
-const josefinSans = Josefin_Sans({
-  variable: "--font-josefinSans",
-  subsets: ["latin"],
-});
-const poppins = Poppins({
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-poppins",
   subsets: ["latin"],
 });
 
@@ -89,9 +47,24 @@ export default function RootLayout({ children }) {
           ${mulish.variable} 
           `}
       >
-        <body className={"text-para bg-bg_para transition-all duration-300"}>
+        <head>
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          />
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/expand.min.css"
+          />
+        </head>
+        <body
+          className={
+            "text-para transition-colors duration-300 bg-bg_radial_darkblue"
+          }
+        >
           <Navbar />
           {children}
+          <Footer />
         </body>
       </html>
     </ThemeProvider>
