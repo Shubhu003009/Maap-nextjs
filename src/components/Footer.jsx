@@ -1,10 +1,11 @@
+import Link from "next/link";
 import SocialLinks from "./Ui/SocialLinks";
 
 const Footer = () => {
   return (
     <>
       <footer className="relative pt-8 pb-6">
-        <div className="container mx-auto">
+        <div className="site_layout site_padding_inline">
           <div className="flex justify-between gap-10 flex-wrap">
             <div>
               <h2 className="text-3xl font-semibold text-primary_dark font-lora">
@@ -18,87 +19,87 @@ const Footer = () => {
             <div>
               <div className="flex md:justify-end gap-10 md:gap-28 flex-wrap items-top mb-6">
                 <div>
-                  <span className="block uppercase text-sm font-lora mb-4">
+                  <span className="block uppercase text-primary_dark text-sm font-lora mb-4">
                     Useful Links
                   </span>
                   <ul className="list-unstyled">
                     <li>
-                      <a
+                      <Link
                         className="font-semibold block mb-2 text-sm"
-                        href="https://www.creative-tim.com/presentation?ref=njs-profile"
+                        href="/"
                       >
-                        About Us
-                      </a>
+                        Home
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         className="font-semibold block mb-2 text-sm"
-                        href="https://blog.creative-tim.com?ref=njs-profile"
+                        href="/products"
                       >
-                        Blog
-                      </a>
+                        Products
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         className="font-semibold block mb-2 text-sm"
-                        href="https://www.github.com/creativetimofficial?ref=njs-profile"
+                        href="/contact"
                       >
-                        Github
-                      </a>
+                        Contact Us
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         className="font-semibold block mb-2 text-sm"
-                        href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile"
+                        href="/about"
                       >
-                        Free Products
-                      </a>
+                        About
+                      </Link>
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <span className="block uppercase text-sm font-lora mb-4">
+                  <span className="block uppercase text-primary_dark text-sm font-lora mb-4">
                     Other Resources
                   </span>
                   <ul className="list-unstyled">
                     <li>
-                      <a
+                      <Link
                         className="font-semibold block mb-2 text-sm"
-                        href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile"
+                        href="#!"
                       >
-                        MIT License
-                      </a>
+                        Testimonials
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         className="font-semibold block mb-2 text-sm"
-                        href="https://creative-tim.com/terms?ref=njs-profile"
+                        href="#!"
                       >
                         Terms &amp; Conditions
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         className="font-semibold block mb-2 text-sm"
-                        href="https://creative-tim.com/privacy?ref=njs-profile"
+                        href="#!"
                       >
                         Privacy Policy
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         className="font-semibold block mb-2 text-sm"
-                        href="https://creative-tim.com/contact-us?ref=njs-profile"
+                        href="#!"
                       >
-                        Contact Us
-                      </a>
+                        Backlinks
+                      </Link>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-          <hr className="my-6 border-blueGray-300" />
+          <div className="my-6 bg-primary_sky h-px"></div>
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full md:w-4/12 mx-auto text-center">
               <div className="text-sm py-1 text-gray-500">

@@ -19,7 +19,7 @@ export default function Page() {
                 farm-fresh, organic, and sustainable agricultural foods.
               </p>
             </div>
-            <Button href={"/contact-us"}>Contact Now</Button>
+            <Button href={"/contact"}>Contact Now</Button>
           </div>
 
           <img

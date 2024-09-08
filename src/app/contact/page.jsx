@@ -2,13 +2,14 @@ import ClientButton from "@/components/ClientButton";
 
 const Page = () => {
   return (
-    <div className="site_layout site_padding">
-      <div className="grid place-content-center px-5">
-        <form className="w-full max-w-lg" noValidate>
+    <main className="site_structure" id="main-content" role="main">
+      <section className="min-h-svh max-w-lg mx-auto">
+        <h1 className="uppercase text-3xl mb-6">Contact Us</h1>
+        <form autoComplete="on" action="/processing" method="post">
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide text-primary_sky text-xs font-bold mb-2"
                 htmlFor="grid-first-name"
               >
                 First Name
@@ -33,7 +34,7 @@ const Page = () => {
 
             <div className="w-full md:w-1/2 px-3">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide text-primary_sky text-xs font-bold mb-2"
                 htmlFor="grid-last-name"
               >
                 Last Name
@@ -60,7 +61,7 @@ const Page = () => {
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full px-3">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide text-primary_sky text-xs font-bold mb-2"
                 htmlFor="grid-email"
               >
                 E-mail
@@ -68,9 +69,10 @@ const Page = () => {
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 name="email"
-                id="email"
+                id="grid-email"
                 type="email"
                 placeholder="you@example.com"
+                autoComplete="on"
                 pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$"
                 title="Please enter a valid email address."
                 required
@@ -87,15 +89,15 @@ const Page = () => {
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full px-3">
               <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide text-primary_sky text-xs font-bold mb-2"
                 htmlFor="grid-message"
               >
                 Message
               </label>
               <textarea
-                className="block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
+                className="block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-36 resize-none"
                 name="message"
-                id="message"
+                id="grid-message"
                 placeholder="Your message here..."
                 pattern="^.{10,500}$"
                 title="Please enter a message between 10 and 500 characters."
@@ -116,8 +118,8 @@ const Page = () => {
             <ClientButton>Send</ClientButton>
           </div>
         </form>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

@@ -5,8 +5,8 @@ const validateForm = (event) => {
 
   const firstName = document.getElementById("grid-first-name");
   const lastName = document.getElementById("grid-last-name");
-  const email = document.getElementById("email");
-  const message = document.getElementById("message");
+  const email = document.getElementById("grid-email");
+  const message = document.getElementById("grid-message");
 
   const firstNameError = document.getElementById("first-name-error");
   const lastNameError = document.getElementById("last-name-error");
@@ -74,7 +74,7 @@ const validateForm = (event) => {
 const ClientButton = ({ children }) => {
   return (
     <button
-      className="inline-block focus-visible:outline-offset-4  middle none center rounded-lg bg-[linear-gradient(to_right,_#828dff,_#7cddff)]  py-3 px-4 md:py-4 md:px-7 text-sm font-bold uppercase text-white shadow-md shadow-green-600/20 transition-all hover:shadow-lg hover:shadow-green-600/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+      className="focus-visible:outline-offset-4 rounded-lg bg-[linear-gradient(to_right,_#828dff,_#7cddff)]  py-3 px-4 md:py-4 md:px-7 text-sm font-bold uppercase text-white shadow-sm shadow-sky-600/20 transition-all hover:shadow-md hover:shadow-sky-600/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
       type="submit"
       onClick={validateForm}
     >

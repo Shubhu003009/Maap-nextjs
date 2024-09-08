@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useState } from "react";
 
 import { BurgerButton } from "./BurgerButton";
-import DarkMode from "./DarkMode";
 import SocialLinks from "./Ui/SocialLinks";
 
 const Sidebar = ({ navLinks }) => {
@@ -100,11 +99,6 @@ const Sidebar = ({ navLinks }) => {
             >
               <li className="overflow-hidden">
                 <motion.div variants={sideBarLinkVars}>
-                  <DarkMode />
-                </motion.div>
-              </li>
-              <li className="overflow-hidden">
-                <motion.div variants={sideBarLinkVars}>
                   <Link href="/" onClick={() => setopen(false)}>
                     Home
                   </Link>
@@ -121,7 +115,7 @@ const Sidebar = ({ navLinks }) => {
               ))}
             </motion.ul>
 
-            <div className="divider-line w-full bg-green-600 h-px"></div>
+            <div className="divider-line w-full bg-primary_sky h-px"></div>
 
             <SocialLinks />
           </motion.aside>
