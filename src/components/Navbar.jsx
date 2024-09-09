@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Sidebar from "@/components/Sidebar";
-import Logo from "./Svgs/logo.svg";
+import Logo from "/public/Svgs/logo.svg";
 import DarkMode from "./DarkMode";
 
 const navLinks = [
@@ -14,14 +14,14 @@ const Navbar = () => {
     <>
       <Link
         href="#main-content"
-        className="font-bold sr-only hover:after:hidden focus:not-sr-only focus:absolute focus:top-1 focus:left-1 p-2 text-bg_para bg-para outline-offset-2 focus-visible:outline-4 z-10"
+        className="font-bold sr-only hover:after:hidden focus:not-sr-only focus:absolute focus:top-1 focus:left-1 p-2 text-para_bg bg-para outline-offset-2 focus-visible:outline-4 z-10"
       >
         Skip to main content
       </Link>
       <header
         id="header"
         role="banner"
-        className="site_header mt-4 text-para w-full mx-auto transition-all duration-300 "
+        className="site_header text-para w-full mx-auto transition-all duration-300 "
       >
         <nav
           className="navbar relative site_layout_lg flex justify-between items-center h-12 lg:h-auto"

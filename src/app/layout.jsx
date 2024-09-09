@@ -57,11 +57,7 @@ export default function RootLayout({ children }) {
             href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/expand.min.css"
           />
         </head>
-        <body
-          className={
-            "text-para transition-colors duration-300 bg-bg_radial_darkblue"
-          }
-        >
+        <body className={"text-para bg-para_bg transition-colors duration-300"}>
           <Navbar />
           {children}
           <Footer />

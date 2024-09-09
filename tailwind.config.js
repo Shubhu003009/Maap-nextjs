@@ -50,8 +50,8 @@ module.exports = {
       },
 
       gridTemplateColumns: {
-        custom: "4px repeat(3, calc((100% - 48px - 20px * 2) / 3)) 4px",
-        custom_md: "12px repeat(6, calc((100% - 80px - 28px * 5) / 6)) 12px",
+        custom: "4px repeat(6, calc((100% - 48px - 20px * 5) / 6)) 4px",
+        custom_md: "12px repeat(8, calc((100% - 80px - 28px * 7) / 8)) 12px",
         custom_lg: "1fr repeat(12, calc((69.375rem - 28px * 11) / 12)) 1fr",
       },
       colors: {
@@ -63,11 +63,17 @@ module.exports = {
         primary_bright: "var(--primary_bright)", //#30d46f
         primary_dark: "var(--primary_dark)", //#01493c
         primary_dark2: "var(--primary_dark2)", //#01493c
+
         secondary: "var(--secondary)", //#e9edff
+
         tertiary_light: "var(--tertiary_light)", //#e9edff
+
         para: "var(--para)",
         para_blue: "var(--para_blue)",
-        bg_para: "var(--bg_para)",
+        para_bg: "var(--para_bg)",
+
+        color_back: "var(--color_back)",
+        color_front: "var(--color_front)",
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

@@ -90,7 +90,7 @@ const Sidebar = ({ navLinks }) => {
             animate="open"
             exit="exit"
             className={
-              "z-10 text-para bg-bg_radial_darkblue transition-colors duration-300 touch-none flex flex-col justify-center md:hidden fixed inset-0 p-6 space-y-10 origin-left "
+              "z-10 text-para bg-para_bg transition-colors duration-300 touch-none flex flex-col justify-center md:hidden fixed inset-0 p-6 space-y-10 origin-left "
             }
           >
             <motion.ul
