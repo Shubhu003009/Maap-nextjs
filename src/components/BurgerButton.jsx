@@ -1,4 +1,4 @@
-export const BurgerButton = ({ open, setopen, MotionConfig, motion }) => {
+export const BurgerButton = ({ open, setopen, MotionConfig, m }) => {
   const bgtheme = `bg-para`;
   return (
     <MotionConfig
@@ -7,7 +7,7 @@ export const BurgerButton = ({ open, setopen, MotionConfig, motion }) => {
         ease: "easeInOut",
       }}
     >
-      <motion.button
+      <m.button
         animate={open ? "open" : "closed"}
         onClick={() => {
           setopen((pv) => !pv);
@@ -15,17 +15,17 @@ export const BurgerButton = ({ open, setopen, MotionConfig, motion }) => {
         className={`[&>span]:transition-colors [&>span]:duration-500 relative h-20 w-20 rounded-full`}
         aria-label="sidebar"
       >
-        <motion.span
+        <m.span
           variants={VARIANTS.top}
           className={`absolute h-1 w-10 ${bgtheme}`}
           style={{ y: "-50%", left: "50%", x: "-50%", top: "35%" }}
         />
-        <motion.span
+        <m.span
           variants={VARIANTS.middle}
           className={`absolute h-1 w-10 ${bgtheme}`}
           style={{ left: "50%", x: "-50%", top: "50%", y: "-50%" }}
         />
-        <motion.span
+        <m.span
           variants={VARIANTS.bottom}
           className={`absolute h-1 w-5 ${bgtheme}`}
           style={{
@@ -35,7 +35,7 @@ export const BurgerButton = ({ open, setopen, MotionConfig, motion }) => {
             left: "calc(50% + 10px)",
           }}
         />
-      </motion.button>
+      </m.button>
     </MotionConfig>
   );
 };

@@ -27,6 +27,10 @@ module.exports = {
       },
     },
     extend: {
+      boxShadow: {
+        shadow_sm:
+          "inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.1),0 0 0 1px hsla(230, 13%, 9%, 0.075),0 0.3px 0.4px hsla(230, 13%, 9%, 0.02),0 0.9px 1.5px hsla(230, 13%, 9%, 0.045),0 3.5px 6px hsla(230, 13%, 9%, 0.09)",
+      },
       backgroundImage: {
         bg_radial_darkblue: "var(--bg_radial_darkblue)",
       },
@@ -68,12 +72,13 @@ module.exports = {
 
         tertiary_light: "var(--tertiary_light)", //#e9edff
 
-        para: "var(--para)",
+        para: "rgb(var(--para))",
+        para_bg: "rgb(var(--para_bg))",
         para_blue: "var(--para_blue)",
-        para_bg: "var(--para_bg)",
 
-        color_back: "var(--color_back)",
-        color_front: "var(--color_front)",
+        color_back: "rgb(var(--color_back))",
+        color_front: "rgb(var(--color_front))",
+        color_front_hover: "var(--color_front_hover)",
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

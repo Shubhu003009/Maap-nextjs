@@ -5,7 +5,7 @@ export default function Page() {
     <>
       <main className="site_padding" id="main-content" role="main">
         <section
-          className="relative overflow-hidden content-start items-center grid grid-cols-custom md:grid-cols-custom_md site_lg:grid-cols-custom_lg gap-y-8 gap-x-5 md:gap-x-7"
+          className="relative min-h-svh overflow-hidden content-start items-center grid grid-cols-custom md:grid-cols-custom_md site_lg:grid-cols-custom_lg gap-y-8 gap-x-5 md:gap-x-7"
           id="home"
           aria-labelledby="home-heading"
         >
@@ -26,11 +26,11 @@ export default function Page() {
           </div>
 
           <img
-            className="max-w-60 md:max-w-64 lg:max-w-xs hidden md:inline-block md:col-start-7 -md:col-end-1 site_lg:col-start-9 site_lg:-col-end-2"
+            className="max-w-60 md:max-w-64 lg:max-w-xs col-start-2 -col-end-3 md:inline-block md:col-start-7 -md:col-end-1 site_lg:col-start-9 site_lg:-col-end-2"
             src="/images/girl_shopping.webp"
             alt="product rag"
-            // width={1920}
-            // height={1639}
+            width={320}
+            height={432}
           />
 
           <div className="orange_block bg-[linear-gradient(to_right,_#828dff,_#7cddff)] hidden site_lg:inline-block site_lg:-col-start-2 site_lg:-col-end-1 site_lg:h-[240px] rounded-s-[20px]"></div>

@@ -9,7 +9,7 @@ const Page = () => {
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
-                className="block uppercase tracking-wide text-primary_sky text-xs font-bold mb-2"
+                className="block uppercase tracking-wide text-primary_dark text-xs font-bold mb-2"
                 htmlFor="grid-first-name"
               >
                 First Name
@@ -34,7 +34,7 @@ const Page = () => {
 
             <div className="w-full md:w-1/2 px-3">
               <label
-                className="block uppercase tracking-wide text-primary_sky text-xs font-bold mb-2"
+                className="block uppercase tracking-wide text-primary_dark text-xs font-bold mb-2"
                 htmlFor="grid-last-name"
               >
                 Last Name
@@ -61,7 +61,7 @@ const Page = () => {
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full px-3">
               <label
-                className="block uppercase tracking-wide text-primary_sky text-xs font-bold mb-2"
+                className="block uppercase tracking-wide text-primary_dark text-xs font-bold mb-2"
                 htmlFor="grid-email"
               >
                 E-mail
@@ -89,7 +89,7 @@ const Page = () => {
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full px-3">
               <label
-                className="block uppercase tracking-wide text-primary_sky text-xs font-bold mb-2"
+                className="block uppercase tracking-wide text-primary_dark text-xs font-bold mb-2"
                 htmlFor="grid-message"
               >
                 Message

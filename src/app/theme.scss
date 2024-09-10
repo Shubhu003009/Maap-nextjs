@@ -7,8 +7,10 @@
 
   --primary_sky: #38bdf8e6;
 
-  --para: #00182e;
-  --para_bg: #ffffff;
+  --para: 0 24 46;
+  --para_bg: 255 255 255;
+  // --para: #00182e;
+  // --para_bg: #ffffff;
 
   --para_blue: #e9edff;
 
@@ -16,8 +18,11 @@
 
   --tertiary_light: #e9edff;
 
-  --color_front: #000;
-  --color_back: #fff;
+  --color_front: 0 0 0;
+  --color_front_hover: rgba(255, 255, 255);
+  --color_back: 255 255 255;
+  // --color_front: #000;
+  // --color_back: #fff;
 }
 
 [data-theme="dark-mode"] {
@@ -29,8 +34,10 @@
 
   --primary_sky: #38bdf8e6;
 
-  --para: #b6c2cf;
-  --para_bg: #1d2125;
+  --para: 182 194 207;
+  --para_bg: 29 33 37;
+  // --para: #b6c2cf;
+  // --para_bg: #1d2125;
 
   --para_blue: #00182e;
 
@@ -38,6 +45,9 @@
 
   --tertiary_light: #00182e;
 
-  --color_back: #000;
-  --color_front: #fff;
+  --color_back: 0 0 0;
+  --color_front: 255 255 255;
+  --color_front_hover: rgba(255, 255, 255, 0.1);
+  // --color_back: #000;
+  // --color_front: #fff;
 }

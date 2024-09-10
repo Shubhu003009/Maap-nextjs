@@ -1,6 +1,12 @@
 "use client";
 
-import { motion, AnimatePresence, MotionConfig } from "framer-motion";
+import {
+  m,
+  AnimatePresence,
+  MotionConfig,
+  LazyMotion,
+  domAnimation,
+} from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -70,57 +76,59 @@ const Sidebar = ({ navLinks }) => {
 
   return (
     <>
-      <motion.div
-        className="block md:hidden relative z-20"
-        style={{ transform: "translateX(20px) scale(0.5)" }}
-      >
-        <BurgerButton
-          open={open}
-          setopen={setopen}
-          motion={motion}
-          MotionConfig={MotionConfig}
-        />
-      </motion.div>
+      <LazyMotion features={domAnimation}>
+        <m.div
+          className="block md:hidden relative z-20"
+          style={{ transform: "translateX(20px) scale(0.5)" }}
+        >
+          <BurgerButton
+            open={open}
+            setopen={setopen}
+            m={m}
+            MotionConfig={MotionConfig}
+          />
+        </m.div>
 
-      <AnimatePresence>
-        {open && (
-          <motion.aside
-            variants={sidebarVars}
-            initial="close"
-            animate="open"
-            exit="exit"
-            className={
-              "z-10 text-para bg-para_bg transition-colors duration-300 touch-none flex flex-col justify-center md:hidden fixed inset-0 p-6 space-y-10 origin-left "
-            }
-          >
-            <motion.ul
-              className="text-3xl space-y-5 font-bold tracking-tighter"
-              variants={containerVars}
+        <AnimatePresence>
+          {open && (
+            <m.aside
+              variants={sidebarVars}
+              initial="close"
+              animate="open"
+              exit="exit"
+              className={
+                "z-10 text-color_front bg-para_bg transition-colors duration-300 touch-none flex flex-col justify-center md:hidden fixed inset-0 p-6 space-y-10 origin-left "
+              }
             >
-              <li className="overflow-hidden">
-                <motion.div variants={sideBarLinkVars}>
-                  <Link href="/" onClick={() => setopen(false)}>
-                    Home
-                  </Link>
-                </motion.div>
-              </li>
-              {navLinks.map((link) => (
-                <li key={link.href} className="overflow-hidden">
-                  <motion.div variants={sideBarLinkVars}>
-                    <Link href={link.href} onClick={() => setopen(false)}>
-                      {link.value}
+              <m.ul
+                className="text-3xl space-y-5 font-bold tracking-tighter"
+                variants={containerVars}
+              >
+                <li className="overflow-hidden">
+                  <m.div variants={sideBarLinkVars}>
+                    <Link href="/" onClick={() => setopen(false)}>
+                      Home
                     </Link>
-                  </motion.div>
+                  </m.div>
                 </li>
-              ))}
-            </motion.ul>
+                {navLinks.map((link) => (
+                  <li key={link.href} className="overflow-hidden">
+                    <m.div variants={sideBarLinkVars}>
+                      <Link href={link.href} onClick={() => setopen(false)}>
+                        {link.value}
+                      </Link>
+                    </m.div>
+                  </li>
+                ))}
+              </m.ul>
 
-            <div className="divider-line w-full bg-primary_sky h-px"></div>
+              <div className="divider-line w-full bg-primary_sky h-px"></div>
 
-            <SocialLinks />
-          </motion.aside>
-        )}
-      </AnimatePresence>
+              <SocialLinks />
+            </m.aside>
+          )}
+        </AnimatePresence>
+      </LazyMotion>
     </>
   );
 };

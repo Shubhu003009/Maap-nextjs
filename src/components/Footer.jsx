@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="site_layout site_padding_inline">
           <div className="md:flex justify-between gap-10 flex-wrap">
             <div>
-              <h2 className="text-2xl md:text-3xl font-semibold text-primary_dark uppercase">
+              <h2 className="text-2xl md:text-3xl font-semibold text-green-600 uppercase">
                 Let's keep in touch!
               </h2>
               <span className="text-xs font-medium text-para mt-0 mb-2 uppercase">
@@ -19,72 +19,50 @@ const Footer = () => {
             <div>
               <div className="md:flex md:justify-end gap-10 md:gap-28 flex-wrap items-top mb-6">
                 <div>
-                  <span className="block uppercase text-primary_dark text-base font-lora mb-4">
+                  <span className="block uppercase text-color_front text-base font-lora mb-4">
                     Useful Links
                   </span>
-                  <ul className="list-unstyled text-sm">
+                  <ul className="[&>li>a]:block [&>li>a]:py-2 text-sm font-semibold mb-5 md:mb-0">
                     <li>
-                      <Link className="font-semibold block mb-2" href="/">
-                        Home
-                      </Link>
+                      <Link href="/">Home</Link>
                     </li>
                     <li>
-                      <Link
-                        className="font-semibold block mb-2"
-                        href="/products"
-                      >
-                        Products
-                      </Link>
+                      <Link href="/contact">Contact Us</Link>
                     </li>
                     <li>
-                      <Link
-                        className="font-semibold block mb-2"
-                        href="/contact"
-                      >
-                        Contact Us
-                      </Link>
+                      <Link href="/products">Products</Link>
                     </li>
                     <li>
-                      <Link className="font-semibold block mb-2" href="/about">
-                        About
-                      </Link>
+                      <Link href="/about">About</Link>
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <span className="block uppercase text-base text-primary_dark font-lora mb-4">
+                  <span className="block uppercase text-base text-color_front font-lora mb-4">
                     Other Resources
                   </span>
-                  <ul className="list-unstyled text-sm">
+                  <ul className="[&>li>a]:block [&>li>a]:py-2 text-sm font-semibold">
                     <li>
-                      <Link className="font-semibold block mb-2" href="#!">
-                        Testimonials
-                      </Link>
+                      <Link href="#!">Testimonials</Link>
                     </li>
                     <li>
-                      <Link className="font-semibold block mb-2" href="#!">
-                        Terms &amp; Conditions
-                      </Link>
+                      <Link href="#!">Terms &amp; Conditions</Link>
                     </li>
                     <li>
-                      <Link className="font-semibold block mb-2" href="#!">
-                        Privacy Policy
-                      </Link>
+                      <Link href="#!">Privacy Policy</Link>
                     </li>
                     <li>
-                      <Link className="font-semibold block mb-2" href="#!">
-                        Backlinks
-                      </Link>
+                      <Link href="#!">Backlinks</Link>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div className="my-6 bg-primary_sky h-px"></div>
+          <div className="my-6 bg-green-500 h-px"></div>
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full md:w-4/12 mx-auto text-center">
-              <div className="text-sm py-1 text-gray-500">
+              <div className="text-sm py-5 text-color_front">
                 Copyright © 2024 mountabuagroproducts.
               </div>
             </div>

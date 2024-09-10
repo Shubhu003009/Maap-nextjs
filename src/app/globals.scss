@@ -18,25 +18,21 @@
   box-sizing: border-box;
 }
 
-a::after {
-  content: "";
-  width: 0px;
-  height: 2px;
-  background-color: #06cbf7;
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  transition: 150ms ease-in;
+a:not([role="button"], [aria-label="logo"]):hover {
+  @apply bg-color_front_hover shadow-shadow_sm;
 }
-a:hover::after {
-  width: 30px;
+a:not([role="button"], [aria-label="logo"]) {
+  padding: 10px 10px;
 }
-a,
+a:not([role="button"], [aria-label="logo"]),
 button {
-  @apply uppercase focus-visible:outline-1 outline-offset-4 rounded focus-visible:outline-para;
+  @apply uppercase focus-visible:outline-1 -outline-offset-1 rounded focus-visible:outline-para focus-visible:bg-color_front_hover focus-visible:shadow-shadow_sm;
 }
 button {
   @apply focus-visible:outline-offset-4;
+}
+
+a:has(.social_links > *) {
 }
 
 li {

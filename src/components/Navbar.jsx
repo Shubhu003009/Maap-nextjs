@@ -14,14 +14,14 @@ const Navbar = () => {
     <>
       <Link
         href="#main-content"
-        className="font-bold sr-only hover:after:hidden focus:not-sr-only focus:absolute focus:top-1 focus:left-1 p-2 text-para_bg bg-para outline-offset-2 focus-visible:outline-4 z-10"
+        className="font-bold sr-only hover:after:hidden focus:not-sr-only focus:absolute focus:top-1 focus:p-1 focus:left-1 text-color_front outline-offset-2 focus-visible:outline-4 z-10"
       >
         Skip to main content
       </Link>
       <header
         id="header"
         role="banner"
-        className="site_header text-para w-full mx-auto transition-all duration-300 "
+        className="site_header w-full mx-auto transition-all duration-300 "
       >
         <nav
           className="navbar relative site_layout_lg flex justify-between items-center h-12 lg:h-auto"
@@ -29,11 +29,7 @@ const Navbar = () => {
           aria-label="Main Navigation"
         >
           <div className="logo">
-            <Link
-              className="hover:after:hidden -outline-offset-1"
-              aria-label="logo"
-              href="/"
-            >
+            <Link className="-outline-offset-1" aria-label="logo" href="/">
               <Logo className="lg:text-7xl text-5xl text-sky-400/90" />
             </Link>
           </div>
@@ -43,7 +39,7 @@ const Navbar = () => {
             </div>
             <ul className="hidden md:flex">
               {navLinks.map((link) => (
-                <li className="mx-[8px] pb-[2px]" key={link.href}>
+                <li key={link.href}>
                   <Link href={link.href}>{link.value}</Link>
                 </li>
               ))}
