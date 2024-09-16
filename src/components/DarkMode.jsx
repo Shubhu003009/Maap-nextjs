@@ -29,7 +29,7 @@ export default function DarkMode() {
           width="1em"
           height="1em"
           fill="currentColor"
-          className="theme-toggle__expand"
+          className="text-color_front theme-toggle__expand"
           viewBox="0 0 32 32"
         >
           <clipPath id="theme-toggle__expand__cutout">

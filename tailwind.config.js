@@ -28,8 +28,7 @@ module.exports = {
     },
     extend: {
       boxShadow: {
-        shadow_sm:
-          "inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.1),0 0 0 1px hsla(230, 13%, 9%, 0.075),0 0.3px 0.4px hsla(230, 13%, 9%, 0.02),0 0.9px 1.5px hsla(230, 13%, 9%, 0.045),0 3.5px 6px hsla(230, 13%, 9%, 0.09)",
+        shadow_sm: "var(--shadow_sm)",
       },
       backgroundImage: {
         bg_radial_darkblue: "var(--bg_radial_darkblue)",
@@ -37,6 +36,7 @@ module.exports = {
       fontFamily: {
         lora: ["var(--font-lora)"],
         mulish: ["var(--font-mulish)"],
+        syne: ["var(--font-syne)"],
       },
       keyframes: {
         ripple: {
@@ -54,9 +54,9 @@ module.exports = {
       },
 
       gridTemplateColumns: {
-        custom: "4px repeat(6, calc((100% - 48px - 20px * 5) / 6)) 4px",
-        custom_md: "12px repeat(8, calc((100% - 80px - 28px * 7) / 8)) 12px",
-        custom_lg: "1fr repeat(12, calc((69.375rem - 28px * 11) / 12)) 1fr",
+        custom: "repeat(6, calc((100% - 1rem * 5) / 6))",
+        custom_md: "repeat(8, calc((100% - 28px * 7) / 8))",
+        custom_lg: "repeat(12, calc((69.375rem - 28px * 11) / 12))",
       },
       colors: {
         // CUSTOM_COLORS
@@ -76,8 +76,8 @@ module.exports = {
         para_bg: "rgb(var(--para_bg))",
         para_blue: "var(--para_blue)",
 
-        color_back: "rgb(var(--color_back))",
-        color_front: "rgb(var(--color_front))",
+        color_back: "var(--color_back)",
+        color_front: "var(--color_front)",
         color_front_hover: "var(--color_front_hover)",
 
         border: "hsl(var(--border))",
@@ -85,6 +85,11 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+
+        dullPink: "var(--dullPink)", // #7c7287;
+        aquagreen: "var(--aquagreen)", // #baffdf;
+        aquacyan: "var(--aquacyan)", // #c1fff2;
+        ashGray: "var(--ashGray)", // #9dc0bc;
 
         destructive: {
           DEFAULT: "hsl(var(--destructive))",

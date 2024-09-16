@@ -1,15 +1,16 @@
 import Navbar from "@/components/Navbar";
 import "./globals.scss";
 import { ThemeProvider } from "@/contexts/Theme";
-import { Lora, Mulish } from "next/font/google";
+import { Oxygen, Syne } from "next/font/google";
 import Footer from "@/components/Footer";
 
-const mulish = Mulish({
+const mulish = Oxygen({
+  weight: ["300", "400", "700"],
   variable: "--font-mulish",
   subsets: ["latin"],
 });
-const lora = Lora({
-  variable: "--font-lora",
+const syne = Syne({
+  variable: "--font-syne",
   subsets: ["latin"],
 });
 
@@ -43,8 +44,8 @@ export default function RootLayout({ children }) {
         lang="en"
         className={`
           relative font-mulish
-          ${lora.variable} 
           ${mulish.variable} 
+          ${syne.variable}
           `}
       >
         <head>
@@ -57,11 +58,7 @@ export default function RootLayout({ children }) {
             href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/expand.min.css"
           />
         </head>
-        <body
-          className={
-            "text-color_front bg-para_bg pt-5 min-h-svh transition-colors duration-300"
-          }
-        >
+        <body className={"gradient text-color_front bg-para_bg min-h-svh"}>
           <Navbar />
           {children}
           <Footer />

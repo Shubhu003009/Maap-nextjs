@@ -39,6 +39,11 @@ export const ThemeProvider = ({ children }) => {
     if (hydrated) {
       localStorage.setItem("color_theme", JSON.stringify(theme));
       document.documentElement.setAttribute("data-theme", theme);
+      if (theme === "dark-mode") {
+        document.querySelector(".gradient").classList.add("active");
+      } else {
+        document.querySelector(".gradient").classList.remove("active");
+      }
     }
   }, [theme, hydrated]);
 

@@ -10,7 +10,7 @@ const SocialLinks = () => {
           target="_blank"
           href="https://www.facebook.com/Kularia-Brothers-Turnkey-Projects-Pvt-Ltd-268655587118858/"
           aria-label="facebook"
-          className="text-blue-500"
+          className="text-blue-400"
         >
           <i className="fa-brands fa-facebook-f"></i>
         </Link>
@@ -18,7 +18,7 @@ const SocialLinks = () => {
           target="_blank"
           href="https://www.instagram.com/kulariabrothers"
           aria-label="instagram"
-          className="text-pink-500"
+          className="text-pink-400"
         >
           <i className="fa-brands fa-instagram"></i>
         </Link>
@@ -26,7 +26,7 @@ const SocialLinks = () => {
           target="_blank"
           href="https://www.linkedin.com/company/kularia-brothers-turnkey-projects-pvt-ltd"
           aria-label="linkedin"
-          className="text-sky-600"
+          className="text-sky-400"
         >
           <i className="fa-brands fa-linkedin" />
         </Link>
@@ -34,7 +34,7 @@ const SocialLinks = () => {
           target="_blank"
           href="https://youtube.com/@kulariabrothers"
           aria-label="youtube"
-          className="text-red-500"
+          className="text-red-400"
         >
           <i className="fa-brands fa-youtube"></i>
         </Link>
@@ -42,7 +42,7 @@ const SocialLinks = () => {
           target="_blank"
           href="https://pin.it/60RcSBIdG"
           aria-label="pinterest"
-          className="text-red-500"
+          className="text-red-400"
         >
           <i className="fa-brands fa-pinterest-p"></i>
         </Link>
@@ -50,6 +50,7 @@ const SocialLinks = () => {
           target="_blank"
           href="https://twitter.com/KulariaL"
           aria-label="twitter"
+          className="text-color_front"
         >
           <i className="fa-brands fa-x-twitter"></i>
         </Link>
@@ -57,7 +58,7 @@ const SocialLinks = () => {
           target="_blank"
           href="https://wa.me/919920445901?text=type%20your%20message"
           aria-label="whatsapp"
-          className="text-green-500"
+          className="text-green-400"
         >
           <i className="fa-brands fa-whatsapp"></i>
         </Link>
