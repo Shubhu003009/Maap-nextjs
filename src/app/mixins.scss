@@ -22,7 +22,7 @@
     opacity: 0;
     background-image: $bkg2;
   }
-  &.active:after {
+  &.gradient-active:after {
     opacity: 1;
   }
 }

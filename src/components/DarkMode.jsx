@@ -10,7 +10,7 @@ export default function DarkMode() {
   if (theme) {
     return (
       <button
-        className={`theme-toggle ${
+        className={`h-full theme-toggle ${
           theme === "dark-mode"
             ? "theme-toggle--reversed theme-toggle--toggled"
             : ""

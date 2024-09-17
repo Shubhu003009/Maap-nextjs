@@ -40,9 +40,9 @@ export const ThemeProvider = ({ children }) => {
       localStorage.setItem("color_theme", JSON.stringify(theme));
       document.documentElement.setAttribute("data-theme", theme);
       if (theme === "dark-mode") {
-        document.querySelector(".gradient").classList.add("active");
+        document.querySelector(".gradient").classList.add("gradient-active");
       } else {
-        document.querySelector(".gradient").classList.remove("active");
+        document.querySelector(".gradient").classList.remove("gradient-active");
       }
     }
   }, [theme, hydrated]);

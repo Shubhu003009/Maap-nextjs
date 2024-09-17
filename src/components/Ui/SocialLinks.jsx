@@ -50,7 +50,7 @@ const SocialLinks = () => {
           target="_blank"
           href="https://twitter.com/KulariaL"
           aria-label="twitter"
-          className="text-color_front"
+          className="text-color_front transition-all duration-200"
         >
           <i className="fa-brands fa-x-twitter"></i>
         </Link>

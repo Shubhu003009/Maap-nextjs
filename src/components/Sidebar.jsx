@@ -78,7 +78,7 @@ const Sidebar = ({ navLinks }) => {
     <>
       <LazyMotion features={domAnimation}>
         <m.div
-          className="block md:hidden relative z-20"
+          className="block h-[200%] md:hidden relative z-20"
           style={{ transform: "translateX(20px) scale(0.5)" }}
         >
           <BurgerButton
@@ -97,7 +97,7 @@ const Sidebar = ({ navLinks }) => {
               animate="open"
               exit="exit"
               className={
-                "z-10 text-color_front bg-para_bg backdrop-blur-xl transition-colors duration-300 touch-none flex flex-col justify-center md:hidden fixed min-h-svh inset-0 p-6 space-y-10 origin-left "
+                "z-10 text-color_front bg-para_bg backdrop-blur-xl touch-none flex flex-col justify-center md:hidden fixed min-h-svh inset-0 p-6 space-y-10 origin-left "
               }
             >
               <m.ul

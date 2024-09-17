@@ -30,9 +30,10 @@ const ImageCarousel = () => {
 
     const updateArrowVisibility = () => {
       const scrollWidth = carousel.scrollWidth - carousel.clientWidth;
-      arrowIcons[0].style.display = carousel.scrollLeft === 0 ? "none" : "grid";
-      arrowIcons[1].style.display =
-        carousel.scrollLeft === scrollWidth ? "none" : "grid";
+      arrowIcons[0].style.visibility =
+        carousel.scrollLeft === 0 ? "hidden" : "";
+      arrowIcons[1].style.visibility =
+        carousel.scrollLeft === scrollWidth ? "hidden" : "";
     };
 
     const handleArrowClick = (direction) => {
@@ -124,9 +125,9 @@ const ImageCarousel = () => {
   }, []);
 
   return (
-    <>
+    <div className="site_structure">
       <div className="flex space-x-4 items-end justify-end">
-        <div
+        <button
           ref={arrowLeftRef}
           className="bg-white w-10 h-10 grid items-center justify-center rounded-xl rotate-90 shrink-0 cursor-pointer"
           role="button"
@@ -145,8 +146,8 @@ const ImageCarousel = () => {
               clipRule="evenodd"
             />
           </svg>
-        </div>
-        <div
+        </button>
+        <button
           ref={arrowRightRef}
           className="bg-[#333] w-10 h-10 grid items-center justify-center rounded-xl -rotate-90 shrink-0 cursor-pointer"
           role="button"
@@ -165,8 +166,9 @@ const ImageCarousel = () => {
               clipRule="evenodd"
             />
           </svg>
-        </div>
+        </button>
       </div>
+
       <div
         className="wrapper mt-[3rem]"
         role="region"
@@ -175,6 +177,7 @@ const ImageCarousel = () => {
         <div className="carousel" ref={carouselRef} aria-live="polite">
           {images.map((src, index) => (
             <Image
+              className="shadow-lg"
               key={index}
               src={src}
               alt={`Image ${index + 1}`}
@@ -185,7 +188,7 @@ const ImageCarousel = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -59,7 +59,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="my-6 bg-green-500 h-px"></div>
+          <div className="my-6 bg-[#29294B] h-px"></div>
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full md:w-4/12 mx-auto text-center">
               <div className="text-sm py-5 text-color_front">

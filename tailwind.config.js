@@ -79,6 +79,9 @@ module.exports = {
         color_back: "var(--color_back)",
         color_front: "var(--color_front)",
         color_front_hover: "var(--color_front_hover)",
+        
+        outline_zinc_200: "var(--outline_zinc_200)",
+
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

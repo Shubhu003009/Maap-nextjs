@@ -23,34 +23,39 @@
   overflow-wrap: break-word;
 }
 
-a,
-button {
-  @apply rounded uppercase;
-}
-
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid white;
+  outline: 2px solid var(--color_front);
   outline-offset: -2px;
-  border-radius: 4px;
 }
-
+// btn outline-offset (3px)
 [role="button"]:focus-visible {
   outline-offset: 3px;
 }
-[aria-label="logo"]:focus-visible {
-  outline-offset: -3px;
+
+nav a:focus-visible,
+nav button:focus-visible {
+  outline: none;
 }
 
+a,
+button {
+  @apply rounded uppercase relative;
+}
+
+// padding
 a:not([role="button"], [aria-label="logo"]) {
   padding: 10px 10px;
 }
 // link shadow
-a:not([role="button"], [aria-label="logo"]):hover {
+a:not(
+    [role="button"],
+    [aria-label="logo"],
+    [role="skip to main content"]
+  ):hover {
   background: var(--color_front_hover);
   box-shadow: var(--shadow_sm);
 }
-
 .site_nav a:hover {
   box-shadow: none;
   background: none;
@@ -119,7 +124,9 @@ p {
 .\[\&\>li\>a\]\:text-color_back > li > a,
 .\[\&\>li\>a\]\:text-color_front > li > a,
 .\[\&\>a\]\:text-color_back > a {
-  @apply transition-colors duration-500;
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
 }
 
 .site_layout {
@@ -129,20 +136,23 @@ p {
   @apply py-20;
 }
 .site_padding_inline {
-  @apply px-4 md:px-10 site_lg:px-0;
+  @apply px-6 md:px-10 site_lg:px-0;
 }
 .site_layout_lg {
   @apply max-w-7xl mx-auto px-2;
 }
 .site_structure {
-  @apply max-w-screen-site_lg mx-auto py-[5em] px-4 md:px-10 site_lg:px-0;
+  @apply max-w-screen-site_lg mx-auto py-[5em] px-6 md:px-10 site_lg:px-0;
 }
 
+// FLUID TYPOGRAPHY
 .ff_h1 {
   font-size: 2.25rem;
   font-size: clamp(2.25rem, 0.9166666666666667rem + 2.7777777777777777vw, 3rem);
   line-height: 1;
 }
+
+// FLUID TYPOGRAPHY
 .ff_para {
   font-size: 1rem;
   font-size: clamp(
@@ -153,6 +163,7 @@ p {
   line-height: 1.625;
 }
 
+// GRADIENT WITH TRANSITION
 .gradient {
   @include bkg-img-transition(
     linear-gradient(
@@ -166,4 +177,34 @@ p {
       oklch(25% 0.01 248) 100%
     )
   );
+}
+
+// NAVBAR
+nav {
+  a,
+  button {
+    position: relative;
+    &::after {
+      content: "";
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      transform: scaleX(0);
+      height: 1px;
+      transform-origin: center;
+      position: absolute;
+      display: inline-block;
+      background-color: var(--color_front);
+      transition: transform 200ms ease, height 150ms ease;
+    }
+    &:not([aria-label="Toggle theme"]):hover::after,
+    &:focus-visible:after {
+      transform: scaleX(1);
+      height: 2px;
+    }
+  }
+}
+
+.transition_custom {
+  @apply transition-all duration-200;
 }
