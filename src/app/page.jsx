@@ -37,7 +37,7 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="bg-tertiary_light transition-all duration-500">
+        <section className="bg-tertiary_light transition-all duration-200">
           <ImageCarosel />
         </section>
 
@@ -54,7 +54,7 @@ export default function Page() {
               </p>
             </div>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 mt-12 [&>div]:transition-all [&>div]:duration-500">
+          <div className="grid md:grid-cols-3 gap-6 mt-12 [&>div]:transition-[outline] [&>div]:duration-200 text-color_front">
             <div className="p-6 rounded-lg outline outline-1 outline-outline_zinc_200 shadow-md hover:shadow-lg">
               <div className="flex items-center">
                 <img
@@ -62,14 +62,14 @@ export default function Page() {
                   className="w-10 h-10 rounded-full"
                 />
                 <div className="ml-4">
-                  <h4 className="text-black  font-extrabold">John Doe</h4>
+                  <h4 className="font-extrabold">John Doe</h4>
                   <p className="mt-0.5 text-xs text-gray-500">
                     Founder of Rubik
                   </p>
                 </div>
               </div>
               <div className="mt-6">
-                <p className="text-black  leading-relaxed">
+                <p className="leading-relaxed text-para">
                   The service was amazing. I never had to wait that long for my
                   food. The staff was friendly and attentive, and the delivery
                   was impressively prompt.
@@ -83,14 +83,14 @@ export default function Page() {
                   className="w-10 h-10 rounded-full"
                 />
                 <div className="ml-4">
-                  <h4 className="text-black  font-extrabold">Mark Adair</h4>
+                  <h4 className="font-extrabold">Mark Adair</h4>
                   <p className="mt-0.5 text-xs text-gray-500">
                     Founder of Alpha
                   </p>
                 </div>
               </div>
               <div className="mt-6">
-                <p className="text-black  leading-relaxed">
+                <p className="leading-relaxed text-para">
                   The service was amazing. I never had to wait that long for my
                   food. The staff was friendly and attentive, and the delivery
                   was impressively prompt.
@@ -104,14 +104,14 @@ export default function Page() {
                   className="w-10 h-10 rounded-full"
                 />
                 <div className="ml-4">
-                  <h4 className="text-black  font-extrabold">Simon Konecki</h4>
+                  <h4 className="font-extrabold">Simon Konecki</h4>
                   <p className="mt-0.5 text-xs text-gray-500">
                     Founder of Labar
                   </p>
                 </div>
               </div>
               <div className="mt-6">
-                <p className="text-black  leading-relaxed">
+                <p className="leading-relaxed text-para">
                   The service was amazing. I never had to wait that long for my
                   food. The staff was friendly and attentive, and the delivery
                   was impressively prompt.

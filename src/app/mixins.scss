@@ -1,4 +1,4 @@
-@mixin bkg-img-transition($bkg1, $bkg2, $transTime: 0.5s) {
+@mixin bkg-img-transition($bkg1, $bkg2, $transTime: 200ms) {
   position: relative;
   z-index: 100;
   &:before,

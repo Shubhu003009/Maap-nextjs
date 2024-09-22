@@ -34,7 +34,8 @@ button:focus-visible {
 }
 
 nav a:focus-visible,
-nav button:focus-visible {
+nav button:focus-visible,
+nav button:hover {
   outline: none;
 }
 
@@ -205,6 +206,6 @@ nav {
   }
 }
 
-.transition_custom {
+.transition200 {
   @apply transition-all duration-200;
 }

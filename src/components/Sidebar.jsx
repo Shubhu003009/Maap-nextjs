@@ -24,23 +24,22 @@ const Sidebar = ({ navLinks }) => {
 
   const sidebarVars = {
     close: {
-      x: "-100%",
+      opacity: 0,
       transition: {
-        delay: 0.3,
         ease: [0.075, 0.82, 0.165, 1.0],
       },
     },
     open: {
-      x: 0,
+      opacity: 1,
       transition: {
-        duration: 0.8,
+        duration: 0.5,
         ease: [0.075, 0.82, 0.165, 1.0],
       },
     },
     exit: {
-      x: "-100%",
+      opacity: 0,
       transition: {
-        duration: 0.8,
+        duration: 0.5,
         ease: [0.075, 0.82, 0.165, 1.0],
       },
     },
@@ -97,7 +96,7 @@ const Sidebar = ({ navLinks }) => {
               animate="open"
               exit="exit"
               className={
-                "z-10 text-color_front bg-para_bg backdrop-blur-xl touch-none flex flex-col justify-center md:hidden fixed min-h-svh inset-0 p-6 space-y-10 origin-left "
+                "z-10 text-color_front bg-color_back touch-none flex flex-col justify-center md:hidden fixed min-h-svh inset-0 p-6 space-y-10"
               }
             >
               <m.ul
@@ -122,7 +121,7 @@ const Sidebar = ({ navLinks }) => {
                 ))}
               </m.ul>
 
-              <div className="divider-line w-full bg-primary_sky h-px"></div>
+              <div className="divider-line w-full bg-sky-400 h-px"></div>
 
               <SocialLinks />
             </m.aside>
