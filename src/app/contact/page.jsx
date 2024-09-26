@@ -1,59 +1,59 @@
-"use client";
+// "use client";
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
+// import { zodResolver } from "@hookform/resolvers/zod";
+// import { useForm } from "react-hook-form";
+// import { z } from "zod";
 
 const Page = () => {
-  const contactUsSchema = z.object({
-    email: z.string().trim().min(1, "Required").email(),
-    firstname: z
-      .string()
-      .trim()
-      .min(1, "Required")
-      .min(2, "Alteast 2 characters")
-      .max(15, "limit 15 characters")
-      .regex(
-        new RegExp(/^[a-zA-Z]+[-'s]?[a-zA-Z]+$/),
-        "Name should contain only alphabets"
-      ),
-    lastname: z
-      .string()
-      .trim()
-      .min(1, "Required")
-      .min(2, "Alteast 2 characters")
-      .max(15, "limit 15 characters")
-      .regex(
-        new RegExp(/^[a-zA-Z]+[-'s]?[a-zA-Z]+$/),
-        "Name should contain only alphabets"
-      ),
-    message: z
-      .string()
-      .trim()
-      .min(1, "Required")
-      .min(5, "Alteast 5 characters")
-      .max(150, "limit 200 characters"),
-  });
+  // const contactUsSchema = z.object({
+  //   email: z.string().trim().min(1, "Required").email(),
+  //   firstname: z
+  //     .string()
+  //     .trim()
+  //     .min(1, "Required")
+  //     .min(2, "Alteast 2 characters")
+  //     .max(15, "limit 15 characters")
+  //     .regex(
+  //       new RegExp(/^[a-zA-Z]+[-'s]?[a-zA-Z]+$/),
+  //       "Name should contain only alphabets"
+  //     ),
+  //   lastname: z
+  //     .string()
+  //     .trim()
+  //     .min(1, "Required")
+  //     .min(2, "Alteast 2 characters")
+  //     .max(15, "limit 15 characters")
+  //     .regex(
+  //       new RegExp(/^[a-zA-Z]+[-'s]?[a-zA-Z]+$/),
+  //       "Name should contain only alphabets"
+  //     ),
+  //   message: z
+  //     .string()
+  //     .trim()
+  //     .min(1, "Required")
+  //     .min(5, "Alteast 5 characters")
+  //     .max(150, "limit 200 characters"),
+  // });
 
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors, isSubmitting },
-  } = useForm({
-    resolver: zodResolver(contactUsSchema),
-  });
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   reset,
+  //   formState: { errors, isSubmitting },
+  // } = useForm({
+  //   resolver: zodResolver(contactUsSchema),
+  // });
 
-  const onSubmit = async (data) => {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log(data);
-    reset();
-  };
+  // const onSubmit = async (data) => {
+  //   await new Promise((resolve) => setTimeout(resolve, 1000));
+  //   console.log(data);
+  //   reset();
+  // };
 
   return (
     <main className="site_structure" id="main-content" role="main">
       <section className="min-h-svh max-w-lg mx-auto">
-        <h1 className="uppercase text-3xl mb-6">Contact Us</h1>
+        {/* <h1 className="uppercase text-3xl mb-6">Contact Us</h1>
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="md:shadow-shadow_sm md:p-8 md:rounded-md bg-primary_sky"
@@ -153,7 +153,7 @@ const Page = () => {
               Send Form
             </button>
           </div>
-        </form>
+        </form> */}
       </section>
     </main>
 
