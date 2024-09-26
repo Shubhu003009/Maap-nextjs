@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Sidebar from "@/components/Sidebar";
+// import Sidebar from "@/components/Sidebar";
 import Logo from "/public/Svgs/logo.svg";
 import DarkMode from "./DarkMode";
 
@@ -46,7 +46,7 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
-          <Sidebar navLinks={navLinks} />
+          {/* <Sidebar navLinks={navLinks} /> */}
         </nav>
       </header>
     </>
