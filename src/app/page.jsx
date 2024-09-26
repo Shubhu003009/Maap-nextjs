@@ -37,7 +37,7 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="bg-sky-200 transition-colors duration-200">
+        <section className="bg-primary_dark2 transition-colors duration-200">
           <ImageCarosel />
         </section>
       </main>

@@ -47,13 +47,7 @@ export default function RootLayout({ children }) {
           ${syne.variable}
           `}
       >
-        <head>
-          <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-          />
-        </head>
-        <body className={"gradient text-color_front bg-para_bg min-h-svh"}>
+        <body className={"text-color_front bg-para_bg min-h-svh"}>
           <Navbar />
           {children}
           <Footer />
