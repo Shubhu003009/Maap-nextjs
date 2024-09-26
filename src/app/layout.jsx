@@ -20,21 +20,21 @@ export const metadata = {
     "Welcome to Mountabu Agro Products, your source for quality agricultural products.",
   keywords: "agriculture, products, organic, Mountabu",
   authors: [{ name: "Manish Kularia", name: "Shubham Jangid" }],
-  // openGraph: {
-  //   title: "Home | Mountabu Agro Products",
-  //   description: "Explore our range of agricultural products.",
-  //   url: "https://yourdomain.com",
-  //   siteName: "Mountabu Agro Products",
-  //   images: [
-  //     {
-  //       url: "https://yourdomain.com/image.jpg",
-  //       width: 800,
-  //       height: 600,
-  //       alt: "Mountabu Agro Products Image",
-  //     },
-  //   ],
-  //   type: "website",
-  // },
+  openGraph: {
+    title: "Home | Mountabu Agro Products",
+    description: "Explore our range of agricultural products.",
+    url: "https://yourdomain.com",
+    siteName: "Mountabu Agro Products",
+    images: [
+      {
+        url: "https://yourdomain.com/image.jpg",
+        width: 800,
+        height: 600,
+        alt: "Mountabu Agro Products Image",
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -42,12 +42,13 @@ export default function RootLayout({ children }) {
     <ThemeProvider>
       <html
         lang="en"
-        className={`font-mulish
+        className={`
+          relative font-mulish
           ${mulish.variable} 
           ${syne.variable}
           `}
       >
-        <body className={"text-color_front bg-para_bg min-h-svh"}>
+        <body className={"gradient text-color_front bg-para_bg min-h-svh"}>
           <Navbar />
           {children}
           <Footer />
