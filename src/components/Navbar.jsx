@@ -22,7 +22,7 @@ const Navbar = () => {
       <header
         id="header"
         role="banner"
-        className="bg-primary_sky backdrop-blur-lg shadow-shadow_sm rounded-b-xl sticky top-0 site_header site_layout z-30"
+        className="bg-primary_sky backdrop-blur-lg shadow-shadow_sm rounded-b-xl sticky top-0 site_header site_layout_lg z-30"
       >
         <nav
           className="navbar overflow-hidden relative site_layout_lg flex justify-between items-center h-12 lg:h-14"
