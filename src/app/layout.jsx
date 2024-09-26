@@ -20,21 +20,21 @@ export const metadata = {
     "Welcome to Mountabu Agro Products, your source for quality agricultural products.",
   keywords: "agriculture, products, organic, Mountabu",
   authors: [{ name: "Manish Kularia", name: "Shubham Jangid" }],
-  openGraph: {
-    title: "Home | Mountabu Agro Products",
-    description: "Explore our range of agricultural products.",
-    url: "https://yourdomain.com",
-    siteName: "Mountabu Agro Products",
-    images: [
-      {
-        url: "https://yourdomain.com/image.jpg",
-        width: 800,
-        height: 600,
-        alt: "Mountabu Agro Products Image",
-      },
-    ],
-    type: "website",
-  },
+  // openGraph: {
+  //   title: "Home | Mountabu Agro Products",
+  //   description: "Explore our range of agricultural products.",
+  //   url: "https://yourdomain.com",
+  //   siteName: "Mountabu Agro Products",
+  //   images: [
+  //     {
+  //       url: "https://yourdomain.com/image.jpg",
+  //       width: 800,
+  //       height: 600,
+  //       alt: "Mountabu Agro Products Image",
+  //     },
+  //   ],
+  //   type: "website",
+  // },
 };
 
 export default function RootLayout({ children }) {
@@ -42,8 +42,7 @@ export default function RootLayout({ children }) {
     <ThemeProvider>
       <html
         lang="en"
-        className={`
-          relative font-mulish
+        className={`font-mulish
           ${mulish.variable} 
           ${syne.variable}
           `}
@@ -52,10 +51,6 @@ export default function RootLayout({ children }) {
           <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-          />
-          <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/expand.min.css"
           />
         </head>
         <body className={"gradient text-color_front bg-para_bg min-h-svh"}>

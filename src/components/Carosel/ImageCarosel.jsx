@@ -2,35 +2,35 @@ import Image from "next/image";
 
 const ImageCarousel = () => {
   const images = [
-    // { src: "/images/products_basket.webp", alt: "product baskets" },
-    // { src: "/images/products_rag.jpg", alt: "products rag" },
-    // { src: "/images/raisens.webp", alt: "raisens" },
-    // { src: "/images/wallnuts.jpg", alt: "wallnuts" },
-    // { src: "/images/cheekPeas.webp", alt: "cheekpeas" },
-    {
-      src: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg",
-      alt: "cheekpeas",
-    },
-    {
-      src: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
-      alt: "cheekpeas",
-    },
-    {
-      src: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg",
-      alt: "cheekpeas",
-    },
-    {
-      src: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg",
-      alt: "cheekpeas",
-    },
-    {
-      src: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg",
-      alt: "cheekpeas",
-    },
-    {
-      src: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg",
-      alt: "cheekpeas",
-    },
+    { src: "/images/products_basket.webp", alt: "product baskets" },
+    { src: "/images/products_rag.jpg", alt: "products rag" },
+    { src: "/images/raisens.webp", alt: "raisens" },
+    { src: "/images/wallnuts.jpg", alt: "wallnuts" },
+    { src: "/images/cheekPeas.webp", alt: "cheekpeas" },
+    // {
+    //   src: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg",
+    //   alt: "p1",
+    // },
+    // {
+    //   src: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
+    //   alt: "p2",
+    // },
+    // {
+    //   src: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg",
+    //   alt: "p3",
+    // },
+    // {
+    //   src: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg",
+    //   alt: "p4",
+    // },
+    // {
+    //   src: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg",
+    //   alt: "p5",
+    // },
+    // {
+    //   src: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg",
+    //   alt: "p6",
+    // },
   ];
 
   return (
@@ -49,7 +49,7 @@ const ImageCarousel = () => {
               key={i}
               className="overflow-hidden m-w-[300px] shadow-lg rounded-xl"
             >
-              <img src={img.src} alt={img.alt} width={300} height={300} />
+              <Image src={img.src} alt={img.alt} width={300} height={300} />
             </div>
           ))}
         </div>
