@@ -1,190 +1,47 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import "./emblacss.scss";
 import Image from "next/image";
-import "./carousel.scss";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+
+const images = [
+  { src: "/images/products_basket.webp", alt: "1" },
+  { src: "/images/products_rag.jpg", alt: "2" },
+  { src: "/images/products_seeds.webp", alt: "3" },
+  { src: "/images/raisens.webp", alt: "4" },
+  { src: "/images/wallnuts.jpg", alt: "5" },
+  { src: "/images/cheekPeas.webp", alt: "6" },
+];
 
 const ImageCarousel = () => {
-  const carouselRef = useRef(null);
-  const arrowLeftRef = useRef(null);
-  const arrowRightRef = useRef(null);
-  const images = [
-    "/images/products_basket.webp",
-    "/images/products_rag.jpg",
-    "/images/products_seeds.webp",
-    "/images/raisens.webp",
-    "/images/wallnuts.jpg",
-    "/images/cheekPeas.webp",
-  ];
-
-  useEffect(() => {
-    const carousel = carouselRef.current;
-    const firstImg = carousel.querySelectorAll("img")[0];
-    const arrowIcons = [arrowLeftRef.current, arrowRightRef.current];
-
-    let isDragStart = false,
-      isDragging = false,
-      prevPageX,
-      prevScrollLeft,
-      positionDiff;
-
-    const updateArrowVisibility = () => {
-      const scrollWidth = carousel.scrollWidth - carousel.clientWidth;
-      arrowIcons[0].style.visibility =
-        carousel.scrollLeft === 0 ? "hidden" : "";
-      arrowIcons[1].style.visibility =
-        carousel.scrollLeft === scrollWidth ? "hidden" : "";
-    };
-
-    const handleArrowClick = (direction) => {
-      const firstImgWidth = firstImg.clientWidth + 14;
-      carousel.scrollLeft +=
-        direction === "left" ? -firstImgWidth : firstImgWidth;
-      setTimeout(updateArrowVisibility, 60);
-    };
-
-    const handleKeyboardNavigation = (e) => {
-      if (e.key === "ArrowLeft") handleArrowClick("left");
-      else if (e.key === "ArrowRight") handleArrowClick("right");
-    };
-
-    arrowIcons.forEach((icon, index) => {
-      icon.addEventListener("click", () =>
-        handleArrowClick(index === 0 ? "left" : "right")
-      );
-    });
-
-    document.addEventListener("keydown", handleKeyboardNavigation);
-
-    const autoSlide = () => {
-      if (
-        carousel.scrollLeft <= 0 ||
-        carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth
-      )
-        return;
-
-      positionDiff = Math.abs(positionDiff);
-      const firstImgWidth = firstImg.clientWidth + 14;
-      const valDifference = firstImgWidth - positionDiff;
-
-      carousel.scrollLeft +=
-        carousel.scrollLeft > prevScrollLeft
-          ? positionDiff > firstImgWidth / 3
-            ? valDifference
-            : -positionDiff
-          : positionDiff > firstImgWidth / 3
-          ? -valDifference
-          : positionDiff;
-    };
-
-    const dragStart = (e) => {
-      isDragStart = true;
-      prevPageX = e.pageX || e.touches[0].pageX;
-      prevScrollLeft = carousel.scrollLeft;
-    };
-
-    const dragging = (e) => {
-      if (!isDragStart) return;
-      e.preventDefault();
-      isDragging = true;
-      carousel.classList.add("dragging");
-
-      const pageX = e.type === "touchmove" ? e.touches[0].pageX : e.pageX;
-      positionDiff = pageX - prevPageX;
-      carousel.scrollLeft = prevScrollLeft - positionDiff;
-      updateArrowVisibility();
-    };
-
-    const dragStop = () => {
-      isDragStart = false;
-      carousel.classList.remove("dragging");
-      if (!isDragging) return;
-      isDragging = false;
-      autoSlide();
-    };
-
-    carousel.addEventListener("mousedown", dragStart);
-    carousel.addEventListener("touchstart", dragStart);
-    document.addEventListener("mousemove", dragging);
-    carousel.addEventListener("touchmove", dragging);
-    document.addEventListener("mouseup", dragStop);
-    carousel.addEventListener("touchend", dragStop);
-
-    return () => {
-      arrowIcons.forEach((icon) => {
-        icon.removeEventListener("click", handleArrowClick);
-      });
-      document.removeEventListener("keydown", handleKeyboardNavigation);
-      carousel.removeEventListener("mousedown", dragStart);
-      carousel.removeEventListener("touchstart", dragStart);
-      document.removeEventListener("mousemove", dragging);
-      carousel.removeEventListener("touchmove", dragging);
-      document.removeEventListener("mouseup", dragStop);
-      carousel.removeEventListener("touchend", dragStop);
-    };
-  }, []);
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
 
   return (
     <div className="site_structure">
-      <div className="flex space-x-4 items-end justify-end">
-        <button
-          ref={arrowLeftRef}
-          className="bg-white w-10 h-10 grid items-center justify-center rounded-xl rotate-90 shrink-0 cursor-pointer"
-          role="button"
-          id="left"
-          aria-label="Scroll left"
-          tabIndex="0"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-3 fill-[#333] inline"
-            viewBox="0 0 24 24"
-          >
-            <path
-              fillRule="evenodd"
-              d="M11.99997 18.1669a2.38 2.38 0 0 1-1.68266-.69733l-9.52-9.52a2.38 2.38 0 1 1 3.36532-3.36532l7.83734 7.83734 7.83734-7.83734a2.38 2.38 0 1 1 3.36532 3.36532l-9.52 9.52a2.38 2.38 0 0 1-1.68266.69734z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </button>
-        <button
-          ref={arrowRightRef}
-          className="bg-[#333] w-10 h-10 grid items-center justify-center rounded-xl -rotate-90 shrink-0 cursor-pointer"
-          role="button"
-          aria-label="Scroll right"
-          tabIndex="0"
-          id="right"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-3 fill-[#fff] inline"
-            viewBox="0 0 24 24"
-          >
-            <path
-              fillRule="evenodd"
-              d="M11.99997 18.1669a2.38 2.38 0 0 1-1.68266-.69733l-9.52-9.52a2.38 2.38 0 1 1 3.36532-3.36532l7.83734 7.83734 7.83734-7.83734a2.38 2.38 0 1 1 3.36532 3.36532l-9.52 9.52a2.38 2.38 0 0 1-1.68266.69734z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </button>
-      </div>
-
       <div
-        className="wrapper mt-[3rem]"
+        ref={emblaRef}
+        className="mt-[3rem] embla"
         role="region"
         aria-label="Image Carousel"
       >
-        <div className="carousel" ref={carouselRef} aria-live="polite">
-          {images.map((src, index) => (
-            <Image
-              className="shadow-lg"
-              key={index}
-              src={src}
-              alt={`Image ${index + 1}`}
-              draggable="false"
-              width={400}
-              height={400}
-            />
+        <div
+          className="embla__container grid grid-cols-1 sm:grid-cols-3 items-center justify-items-center gap-5"
+          aria-live="polite"
+        >
+          {images.map((img, i) => (
+            <div
+              key={i}
+              className="embla__slide h-[300px] max-w-[300px] overflow-hidden shadow-lg rounded-xl"
+            >
+              <Image
+                className="w-full bg-cover"
+                src={img.src}
+                alt={img.alt}
+                width={300}
+                height={300}
+              />
+            </div>
           ))}
         </div>
       </div>

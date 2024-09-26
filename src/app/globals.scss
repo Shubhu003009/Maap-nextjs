@@ -164,20 +164,20 @@ p {
 }
 
 // GRADIENT WITH TRANSITION
-// .gradient {
-//   @include bkg-img-transition(
-//     linear-gradient(
-//       to bottom in oklab,
-//       oklch(70% 0.5 255) -37% -37%,
-//       oklch(100% 0 200) 30% 30%
-//     ),
-//     linear-gradient(
-//       to bottom in oklab,
-//       oklch(0% 0.09 255) -208% -208%,
-//       oklch(25% 0.01 248) 100%
-//     )
-//   );
-// }
+.gradient {
+  @include bkg-img-transition(
+    linear-gradient(
+      to bottom in oklab,
+      oklch(70% 0.5 255) -37% -37%,
+      oklch(100% 0 200) 30% 30%
+    ),
+    linear-gradient(
+      to bottom in oklab,
+      oklch(0% 0.09 255) -208% -208%,
+      oklch(25% 0.01 248) 100%
+    )
+  );
+}
 
 // NAVBAR
 nav {
@@ -197,8 +197,7 @@ nav {
       background-color: var(--color_front);
       transition: transform 200ms ease, height 150ms ease;
     }
-    &:not([aria-label="Toggle theme"]):hover::after,
-    &:focus-visible:after {
+    &:focus-visible::after {
       transform: scaleX(1);
       height: 2px;
     }
